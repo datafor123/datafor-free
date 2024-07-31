@@ -35,8 +35,8 @@
   ResourceBundle properties = ResourceBundle.getBundle( "mantleMessages", request.getLocale(), loader );
 %>
     
-    <title><%= properties.getString("pentahoBATitle") %></title>    
-
+    <!--<title><!--%= properties.getString("pentahoBATitle") %></title>-->  
+	<title>Datafor Console</title>
     <script type="text/javascript" src="webcontext.js"></script>
 
 	<%
@@ -76,7 +76,7 @@
 		  }
 		  if (!haveMobileRedirect) {
 			  %>
-			  <META HTTP-EQUIV="refresh" CONTENT="0;URL=./Home">
+			  <META HTTP-EQUIV="refresh" CONTENT="0;URL=./console">
 			  <%
 		  }
 		}

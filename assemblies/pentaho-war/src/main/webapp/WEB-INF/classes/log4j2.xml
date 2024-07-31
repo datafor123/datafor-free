@@ -10,7 +10,7 @@
    | website: https://logging.apache.org/log4j/2.x/manual/configuration.html
  -->
 
-<Configuration name="PentahoPlatform" status="ERROR" dest="out">
+<Configuration name="PentahoPlatform" status="INFO" dest="out" monitorinterval="5">
     <Appenders>
         <!-- ================================= -->
         <!-- Preserve messages in a local file -->
@@ -54,7 +54,7 @@
         <!-- ========================================================= -->
         <!-- Special Log File specifically for Mondrian                -->
         <!-- ========================================================= -->
-        <!--
+        
         <RollingFile name="MONDRIAN" fileName="../logs/mondrian.log" filePattern="../logs/mondrian.log.%i">
             <PatternLayout>
                 <Pattern>%d %-5p [%c] %m%n</Pattern>
@@ -82,7 +82,7 @@
             </Policies>
             <DefaultRolloverStrategy max="1" />
         </RollingFile>
-         -->
+        
          
         <!-- ========================================================== -->
         <!-- Special log file specifically for sensitive data access    -->
@@ -110,7 +110,7 @@
     <!-- Limit loggers    -->
     <!-- ================ -->
     <Loggers>
-        <Logger name="org.apache.hadoop.io.retry" level="INFO"/>
+        <Logger name="org.apache.hadoop.io.retry" level="WARN"/>
         <Logger name="org.hibernate" level="ERROR"/>
         <Logger name="net.sf.ehcache" level="ERROR"/>
         <Logger name="org.quartz" level="ERROR"/>
@@ -118,14 +118,15 @@
         <Logger name="org.springframework.security" level="ERROR"/>
         <Logger name="org.pentaho" level="ERROR"/>
         <Logger name="com.pentaho" level="ERROR"/>
+        <Logger name="com.datafor" level="INFO"/>
         <Logger name="org.jfree.JCommon" level="ERROR"/>
         <Logger name="org.apache.jackrabbit.core.security.authentication.AbstractLoginModule" level="ERROR"/>
-        <Logger name="org.pentaho.platform.osgi" level="INFO"/>
+        <Logger name="org.pentaho.platform.osgi" level="WARN"/>
         <Logger name="org.pentaho.platform.web.http.context" level="WARN"/>
         <Logger name="org.pentaho.di.osgi" level="ERROR"/>
         <Logger name="org.pentaho.di.monitor" level="ERROR"/>
-        <Logger name="org.pentaho.platform.engine.core.system.status" level="INFO"/>
-        <Logger name="org.pentaho.hadoop.shim.DriverManager" level="INFO"/>
+        <Logger name="org.pentaho.platform.engine.core.system.status" level="WARN"/>
+        <Logger name="org.pentaho.hadoop.shim.DriverManager" level="WARN"/>
         
         <!-- =========================== -->
         <!-- Repository Import Log Level -->
@@ -141,17 +142,17 @@
         <!-- =========================== -->
         <!-- Mondrian Log Levels         -->
         <!-- =========================== -->
-        <!--
-        <Logger name="mondrian" level="DEBUG" additivity="false">
+        
+        <Logger name="mondrian" level="WARN" additivity="false">
             <appender-ref ref="MONDRIAN"/>
         </Logger>
-        <Logger name="mondrian.mdx" level="DEBUG" additivity="false">
+        <Logger name="mondrian.mdx" level="WARN" additivity="false">
             <appender-ref ref="MDXLOG"/>
         </Logger>
         <Logger name="mondrian.sql" level="DEBUG" additivity="false">
             <appender-ref ref="SQLLOG"/>
         </Logger>
-         -->
+        
 
         <!-- =========================== -->
         <!-- Sensitive Data Access       -->
@@ -189,6 +190,7 @@
         <Root level="ERROR">
             <appender-ref ref="PENTAHOCONSOLE"/>
             <appender-ref ref="PENTAHOFILE"/>
+            <appender-ref ref="SQLLOG"/>
         </Root>
     </Loggers>
 </Configuration>

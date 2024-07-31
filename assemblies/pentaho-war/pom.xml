@@ -11,9 +11,9 @@
   <version>9.3.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
-    <rdbms>hsqldb</rdbms>
+    <rdbms>postgresql</rdbms>
     <commons-database.version>9.3.0.0-SNAPSHOT</commons-database.version>
-    <prepared.war.directory>${pentaho-server.directory}/tomcat/webapps/pentaho</prepared.war.directory>
+    <prepared.war.directory>${pentaho-server.directory}/tomcat/webapps/datafor</prepared.war.directory>
     <pentaho-hadoop-shims.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
     <prepared.war.lib.directory>${prepared.war.directory}/WEB-INF/lib</prepared.war.lib.directory>
     <jettison.version>1.3.3</jettison.version>
@@ -993,11 +993,11 @@
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <webResources>
-            <resource>
+            <!--<resource>
               <directory>${datasource.resources.directory}/${rdbms}</directory>
               <include>**/context.xml</include>
               <targetPath>META-INF</targetPath>
-            </resource>
+            </resource>-->
             <resource>
               <directory>src/main/resources-filtered/</directory>
               <filtering>true</filtering>

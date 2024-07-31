@@ -23,10 +23,12 @@
   </context-param>
 
   <!-- [BEGIN HSQLDB DATABASES] -->
+  <!--
   <context-param>
     <param-name>hsqldb-databases</param-name>
     <param-value>sampledata@../../data/hsqldb/sampledata,hibernate@../../data/hsqldb/hibernate,quartz@../../data/hsqldb/quartz</param-value>
   </context-param>
+  -->
   <!-- [END HSQLDB DATABASES] -->
 
   <!-- insert additional context-params -->
@@ -165,9 +167,9 @@
   </listener>
 
   <!-- [BEGIN HSQLDB STARTER] -->
-  <listener>
+  <!--<listener>
     <listener-class>org.pentaho.platform.web.http.context.HsqldbStartupListener</listener-class>
-  </listener>
+  </listener>-->
   <!-- [END HSQLDB STARTER] -->
 
   <listener>
@@ -309,7 +311,7 @@
 
   <servlet>
     <servlet-name>Login</servlet-name>
-    <jsp-file>/jsp/PUCLogin.jsp</jsp-file>
+    <jsp-file>/console/login.jsp</jsp-file>
     <init-param>
       <param-name>send401List</param-name>
       <param-value>ServiceActionService,gwtrpc,ws/gwt,mantle/images/spacer.gif</param-value>
@@ -512,7 +514,7 @@
     <url-pattern>/js/themes.js</url-pattern>
   </servlet-mapping>
 
-  <!-- insert additional servlet mappings -->
+  <!-- insert additional servlet mappings,minute -->
   <session-config>
     <tracking-mode>COOKIE</tracking-mode>
     <session-timeout>120</session-timeout>
@@ -571,15 +573,15 @@
 
 	<error-page>
 		<error-code>404</error-code>
-		<location>/unavailable.html</location>
+		<location>/error.htm</location>
 	</error-page>
 	<error-page>
 		<error-code>403</error-code>
-		<location>/unavailable.html</location>
+		<location>/error.htm</location>
 	</error-page>
 	<error-page>
 		<error-code>500</error-code>
-		<location>/unavailable.html</location>
+		<location>/error.htm</location>
 	</error-page>
 
 

@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/pentaho" docbase="webapps/pentaho/">
 	<Resource name="jdbc/Hibernate" auth="Container" type="javax.sql.DataSource"
-		factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="20" minIdle="0" maxIdle="5" initialSize="0"
-		maxWait="10000" username="hibuser" password="password"
-		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:5432/hibernate"
-		validationQuery="select 1" jdbcInterceptors="ConnectionState" defaultAutoCommit="true"/>
-		
+			  factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="200" minIdle="10" maxIdle="200" initialSize="10"
+			  maxWait="10000" username="hibuser" password="password"
+			  driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:25432/hibernate"
+			  testOnBorrow="true"
+			  validationQuery="select 1" />
+
 	<Resource name="jdbc/Quartz" auth="Container" type="javax.sql.DataSource"
-		factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="20" minIdle="0" maxIdle="5" initialSize="0"
-		maxWait="10000" username="pentaho_user" password="password" testOnBorrow="true"
-		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:5432/quartz"
-		validationQuery="select 1"/>
+			  factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="200" minIdle="10" maxIdle="200" initialSize="10"
+			  maxWait="10000" username="pentaho_user" password="password"
+			  driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:25432/quartz"
+			  testOnBorrow="true"
+			  validationQuery="select 1"/>
 
 	<Resource name="jdbc/jackrabbit" auth="Container" type="javax.sql.DataSource"
-		factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="20" minIdle="0"
-		maxIdle="5" initialSize="0"
-		maxWait="10000" username="jcr_user" password="password"
-		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:5432/jackrabbit"
-		validationQuery="select 1"/>
-
+			  factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="200" minIdle="10"
+			  maxIdle="200" initialSize="10"
+			  maxWait="10000" username="jcr_user" password="password"
+			  driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:25432/jackrabbit"
+			  testOnBorrow="true"
+			  validationQuery="select 1"/>
+	<Resource name="jdbc/datafor_modeler_auth" auth="Container" type="javax.sql.DataSource"
+			  factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="200" minIdle="10"
+			  maxIdle="200" initialSize="10"
+			  maxWait="10000" username="postgres" password="postgres"
+			  driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:25432/datafor?stringtype=unspecified"
+			  testOnBorrow="true"
+			  validationQuery="select 1"/>
+	<Resource name="jdbc/datafor_repository" auth="Container" type="javax.sql.DataSource"
+			  factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="200" minIdle="10"
+			  maxIdle="200" initialSize="10"
+			  maxWait="10000" username="upload" password="password"
+			  driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:25432/upload?stringtype=unspecified"
+			  testOnBorrow="true"
+			  validationQuery="select 1"/>
 </Context>
