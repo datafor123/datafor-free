@@ -210,11 +210,6 @@
       <groupId>jaxen</groupId>
       <artifactId>jaxen</artifactId>
     </dependency>
-    <dependency>
-      <groupId>net.snowflake</groupId>
-      <artifactId>snowflake-jdbc</artifactId>
-      <version>${snowflake-jdbc.version}</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>

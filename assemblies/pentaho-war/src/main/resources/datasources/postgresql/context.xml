@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/pentaho" docbase="webapps/pentaho/">
+<Context path="/datafor" docbase="webapps/datafor/">
 	<Resource name="jdbc/Hibernate" auth="Container" type="javax.sql.DataSource"
 			  factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="200" minIdle="10" maxIdle="200" initialSize="10"
 			  maxWait="10000" username="hibuser" password="password"
