@@ -1,0 +1,19 @@
+{
+  "header_logo": {
+    "url": "/images/DataFor-white.svg",
+    "size": {
+      "width": "180px",
+      "height": "32px",
+      "collapseWidth": "29px",
+      "collapseHeight": "30px"
+    }
+  },
+  "login_logo": {
+    "url": "images/DataFor-ImageFont.svg",
+    "size": {
+      "width": "180px",
+      "height": "50px",
+      "margin": "5px auto 10px"
+    }
+  }
+}

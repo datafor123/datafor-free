@@ -1,0 +1,10 @@
+[
+	{
+		"key": "user",
+		"href": "/userui/"
+	},
+	{
+		"key": "role",
+		"href": "/userui/role"
+	}
+]

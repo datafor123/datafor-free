@@ -1,0 +1,83 @@
+{
+  "demos": [
+    {
+      "title": {
+        "zh-CN": "Sales overview",
+        "en-US": "Sales overview",
+        "en": "Sales overview"
+      },
+      "path": "/public/.system_samples/demo1_en.datafor",
+      "image": {
+        "zh-CN": "/public/images/demo1.png",
+        "en-US": "/public/images/demo1.png"
+      }
+    },
+    {
+      "title": {
+        "zh-CN": "Foodmart Analysis",
+        "en-US": "Foodmart Analysis",
+        "en": "Foodmart Analysis"
+      },
+      "locked": false,
+      "path": "/public/.system_samples/demo2_en.datafor",
+      "image": {
+        "zh-CN": "/public/images/demo2.png",
+        "en-US": "/public/images/demo2.png"
+      }
+    },
+    {
+      "title": {
+        "zh-CN": "Overview of Retail Metrics",
+        "en-US": "Overview of Retail Metrics",
+        "en": "Overview of Retail Metrics"
+      },
+      "locked": false,
+      "path": "/public/.system_samples/demo3_en.datafor",
+      "image": {
+        "zh-CN": "/public/images/demo3.png", 
+	"en-US": "/public/images/demo3.png"
+      }
+    },
+    {
+      "title": {
+        "zh-CN": "Online Store Sales Overview",
+        "en-US": "Online Store Sales Overview",
+        "en": "Online Store Sales Overview"
+      },
+      "locked": false,
+      "path": "/public/.system_samples/demo4_en.datafor",
+      "image": {
+        "zh-CN": "/public/images/demo4.png",
+        "en-US": "/public/images/demo4.png"
+      }
+    },
+    {
+      "title": {
+	  "zh-CN": "Sales analysis",
+	  "en-US": "Sales analysis",
+	  "en": "Sales analysis"
+       },
+      "locked": false,
+      "path": "/public/.system_samples/workshop.datafor",
+      "image": {
+	  "zh-CN": "/public/images/workshop.png",
+	  "en-US": "/public/images/workshop.png"
+       }
+    }
+  ],
+  "tutorials": {
+    "center": "https://datafor.com.cn/case/",
+    "right": "/console/static/DATAFOR.pdf"
+  },
+  "times": {
+    "left": "10min",
+    "center": "1min",
+    "right": "15min",
+    "shown": false
+  },
+  "tutorials_hidden": {
+    "left": null,
+    "center": false,
+    "right": false
+  }
+}
