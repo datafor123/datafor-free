@@ -11,6 +11,7 @@
   <version>9.3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
+    <tomcat.version>9.0.91</tomcat.version>
     <tomcat.directory>${project.build.directory}/apache-tomcat-${tomcat.version}</tomcat.directory>
     <replacer.version>1.5.2</replacer.version>
     <wkhtmltox.version>0.10.0_rc2</wkhtmltox.version>

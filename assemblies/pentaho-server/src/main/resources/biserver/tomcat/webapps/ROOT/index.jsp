@@ -19,8 +19,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Pentaho Business Analytics</title>
-    <meta http-equiv="refresh" content="0;URL=/pentaho">
+    <title>Datafor Business Analytics</title>
+    <meta http-equiv="refresh" content="0;URL=/datafor">
   </head>
   <body>
   </body>
