@@ -1,113 +1,299 @@
-pentaho-platform
-================
+# Datafor Visualization and Analysis
 
-Overview
---------
+Datafor Visualization and Analysis is a self-service agile BI tool that provides intuitive and user-friendly data visualization and analysis capabilities to help users quickly explore, analyze, and make decisions with their data.
 
-This set of modules make up Pentaho's core platform and business analytics server.
-
-## api
-This module contains common interfaces used by the platform.  APIs for the plugin system, repository, security, and many others exist here.
-
-## core
-This module contains core implementations of platform sub-systems and utility classes.
-
-## repository
-This module contains the JCR Jackrabbit repository implementation of the pentaho platform
-
-## scheduler
-This module contains the Quartz based scheduler implementation of the pentaho platform
-
-## extensions
-This module contains a variety of capabilities used for various purposes within the platform
-
-## user-console
-This module is a GWT front end for the pentaho platform, allowing users to navigate the repository, execute and schedule content, as well as administer the platform
-
-## assemblies
-This module creates the Pentaho Server archive and contains the samples and other content needed for the Pentaho Server.
+Datafor is developed based on [Pentaho BA Server Core](https://github.com/pentaho/pentaho-platform).
 
 
-How to build
---------------
+## Features
 
-Pentaho platform uses the maven framework. 
+**Data Connectivity:** Supports connecting to various data sources, including relational databases, NoSQL databases, data warehouses, cloud data sources, and file data sources.
 
+**Data Visualization:** Offers a rich variety of visual charts and elements with customization options, enabling users to easily create beautiful data analysis reports and data visualization pages.
 
-#### Pre-requisites for building the project:
-* Maven, version 3+
-* Java JDK 11
-* This [settings.xml](https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings.xml) in your <user-home>/.m2 directory
+**Multidimensional Analysis:** Provides powerful multidimensional analysis capabilities to help users delve into the patterns and relationships behind the data, uncovering potential business opportunities and issues.
 
-#### Building it
+**Embedded Analytics:** Supports embedding data visualization and analysis functions into other applications to achieve real-time data visualization and analysis.
 
-This is a maven project, and to build it use the following command
+## Screenshots
 
-```
-mvn clean install
-```
-
-Optionally you can specify -Dmaven.test.skip=true to skip the tests (even though
-you shouldn't as you know)
-
-The build result will be a Pentaho package located in *assemblies/pentaho-server/*. Then, this package can be dropped inside your system folder.
-
-#### Running the tests
-
-__Unit tests__
-
-This will run all unit tests in the project (and sub-modules). To run integration tests as well, see Integration Tests below.
-
-```
-$ mvn test
-```
-
-If you want to remote debug a single java unit test (default port is 5005):
-
-```
-$ cd core
-$ mvn test -Dtest=<<YourTest>> -Dmaven.surefire.debug
-```
-
-__Integration tests__
-
-In addition to the unit tests, there are integration tests that test cross-module operation. This will run the integration tests.
-
-```
-$ mvn verify -DrunITs
-```
-
-To run a single integration test:
-
-```
-$ mvn verify -DrunITs -Dit.test=<<YourIT>>
-```
-
-To run a single integration test in debug mode (for remote debugging in an IDE) on the default port of 5005:
-
-```
-$ mvn verify -DrunITs -Dit.test=<<YourIT>> -Dmaven.failsafe.debug
-```
-
-To skip test
-
-```
-$ mvn clean install -DskipTests
-```
-
-To get log as text file
-
-```
-$ mvn clean install test >log.txt
-```
+#### WYSIWYG Designer
 
 
-__IntelliJ__
+<div style="text-align:center">
+  <img class="img-responsive" src="https://github.com/datafor123/docs/raw/main/images/1%20visualizer.PNG"  />
+</div>
 
-* Don't use IntelliJ's built-in maven. Make it use the same one you use from the commandline.
-  * Project Preferences -> Build, Execution, Deployment -> Build Tools -> Maven ==> Maven home directory
+#### Create multi-dimensional models in a few clicks
 
-````
-For issue tracking and bug report please use
-[Jira](http://jira.pentaho.com/browse/biserver). Its master branch is built upon commit
-merges in [Jenkins Continuous Integration](http://ci.pentaho.com/job/BISERVER-CE/)
+<div style="text-align:center">
+  <img class="img-responsive" src="https://github.com/datafor123/docs/raw/main/images/4%20modeler.png"  />
+</div>
+
+#### Interactive analysis report
+
+<div style="text-align:center">
+  <img class="img-responsive" src="https://github.com/datafor123/docs/raw/main/images/demo2.gif"  width="100%" />
+</div>
+
+#### Cool visualization
+
+<div style="text-align:center">
+  <img class="img-responsive" src="https://github.com/datafor123/docs/raw/main/images/5%20demo.PNG"  />
+</div>
+
+## Get Datafor
+
+You can download Datafor for the following platforms:
+
+- Linux
+- Windows
+- Docker
+
+## Install Manual
+
+- [CentOS](https://help.datafor.com.cn/docs/en/20%20setup/datafor-centos)
+- [Ubuntu](https://help.datafor.com.cn/docs/en/20%20setup/datafor-ubuntu)
+- [Windows](https://help.datafor.com.cn/docs/en/20%20setup/datafor-windows)
+- Docker
+
+## Get Help
+
+- For bug reports and feature requests, visit our [GitHub Issues](https://github.com/datafor123/Datafor-Free-Edition/issues) page.
+- For general questions, email us at [support@datafor.com.cn](mailto:support@datafor.com.cn).
+- Refer to the [help](https://help.datafor.com.cn/docs/en/) documentation for additional assistance.
+
+## Free Edition V.S. Enterprise Edition
+
+The Enterprise Edition offers significant advantages over the Free Edition, including support for more data sources, advanced analysis and visualization features, enhanced security, improved integration options, and optimized system performance.
+
+<table>
+  <tr>
+    <th colspan="2" style="width:40%;text-align:center;">Features</th>
+    <th style="width:30%;text-align:center;">Free Edition</th>
+    <th style="width:30%;text-align:center;">Enterprise Edition</th>
+  </tr>
+  <tr>
+    <td rowspan="2" style="width:15%">Data Sources</td>
+    <td style="width:25%">Relational Databases</td>    
+    <td align="center">MySQL, PostgreSQL, Oracle, MS SQL Server</td>
+    <td align="center">Addition: GaussDB, Gaussdb2000, Greenplum, Tidb, Clickhouse, SparkSQL, Cloudera Impala, Snowflake, Impala, Hadoop Hive 2, Hana, InfluxDB, MongoDB,  Doris, Redshift</td>
+  </tr>
+  <tr>
+    <td >File Upload (CSV, Excel)</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="5">Analysis Models</td>
+    <td>Multidimensional Modeling</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Data Masking</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Data Dictionary</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Calculated Fields</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Calculated Measures</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="8">Visualization</td>
+    <td>Charts</td>
+    <td align="center">Pivot Table, Table, KPI Card, Dimension Field Information, Clustered Column Chart, Stacked Column Chart, 100% Stacked Column Chart, Clustered Bar Chart, Stacked Bar Chart, 100% Stacked Bar Chart, Line Chart, Column Line Chart, Pie Chart, Scatter Plot, Sunburst Chart, Gauge, Sankey</td>
+    <td align="center">Addition：Parent-Child Tree Table, Hierarchical Tree Table, </td>
+  </tr>
+  <tr>
+    <td>Maps</td>
+    <td align="center">Filled GeoJson Map, Marker GeoJson Map, GIS Marker Map</td>
+    <td align="center">Addition：Heat Map, Mapbox/AMap, Image Map</td>
+  </tr>
+  <tr>
+    <td>Assists Components</td>
+    <td align="center">Image File, Tabs, Text, SVG, Icon Fonts, Rectangle, Line, Ellipse, Hyperlink</td>
+    <td align="center">Addition: Hyperlink</td>
+  </tr>
+  <tr>
+    <td>Filter Components</td>
+    <td align="center">Dropdown, List Box, Button, Radio/Checkbox, Date, Date Range, Timeline, Range Timeline, Numeric Range Filter</td>
+    <td align="center">Addition: Pager, Search</td>
+  </tr>
+  <tr>
+    <td>Custom Styles</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Parameter Controller</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Mobile Layout</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Export to PDF, PNG, CSV, Excel</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="6">Analysis</td>
+    <td>Cross-Model analytics</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Drill Down</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Custom Events</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Drill Through</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Parameters</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Calculated Measures</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Security</td>
+    <td>File, Folder, and Analysis Model Access Control</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Row-Level Security</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Object-Level Security</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="7">Integration and Embedding</td>
+    <td>Single Sign-On</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Share Links</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>LDAP</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>CAS</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>JWT</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>WeChat</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>DingTalk</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="8">System</td>
+    <td>Users and Roles</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Report Export/Import</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Analysis Model Export/Import</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Lineage Analysis</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Log Auditing</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>ETL Scheduling (Integrated with Kettle)</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Backup and Restore</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Enterprise Data Portal</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Performance</td>
+    <td>Pre-Aggregated Tables</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Query and Model Caching</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+</table>
+
+
+## Contact us
+
+marketing@datafor.com.cn
+
+
+
+
+

@@ -10,6 +10,7 @@
   <artifactId>pentaho-data</artifactId>
   <version>9.3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+
   <dependencies>
     <dependency>
       <groupId>org.hsqldb</groupId>

@@ -7,8 +7,8 @@
     <artifactId>pentaho-platform-assemblies</artifactId>
     <version>9.3.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>datafor-server-free</artifactId>
-  <version>6.06-SNAPSHOT</version>
+  <artifactId>pentaho-server-ce</artifactId>
+  <version>9.3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <tomcat.version>9.0.91</tomcat.version>
@@ -218,6 +218,7 @@
     </dependency>
   </dependencies>
   <build>
+    <finalName>datafor-server-free-linux-6.0.6</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
