@@ -15,7 +15,7 @@
 # See the GNU General Public License for more details.
 #
 #
-# Copyright 2011 - ${copyright.year} Hitachi Vantara. All rights reserved.
+# Copyright 2011 - 2020 Hitachi Vantara. All rights reserved.
 # *******************************************************************************************
 
 ### ====================================================================== ###
@@ -29,7 +29,7 @@ cd $DIR_REL
 DIR=`pwd`
 #cd -
 
-. "$DIR/set-pentaho-env.sh"
+. "$DIR/set-datafor-env.sh"
 
 setPentahoEnv "$DIR/jre"
 
@@ -47,21 +47,17 @@ if [ -f "$DIR/promptuser.sh" ]; then
   rm "$DIR/promptuser.sh"
 fi
 if [ "$errCode" = 0 ]; then
-  cd "$DIR/tomcat/bin"
-  CATALINA_OPTS="-Xms2048m -Xmx6144m -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dfile.encoding=utf8 -Djava.locale.providers=COMPAT,SPI -DDI_HOME=\"$DI_HOME\""
-  export CATALINA_OPTS
-
-  #Sets options that only get read by Java 11 to remove illegal reflective access warnings
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/sun.net.www.protocol.jar=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.lang=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.net=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.security=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens java.base/sun.net.www.protocol.file=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens java.base/sun.net.www.protocol.ftp=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens java.base/sun.net.www.protocol.http=ALL-UNNAMED"
-  JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens java.base/sun.net.www.protocol.https=ALL-UNNAMED"  
-  export JDK_JAVA_OPTIONS
-
   JAVA_HOME=$_PENTAHO_JAVA_HOME
+  export JAVA_HOME
+  if [ -e "$DIR/update/datafor-updater.jar" ]; then
+      "$JAVA_HOME/bin/java" -jar "$DIR/update/datafor-updater.jar"
+      mv "$DIR/update/datafor-updater.jar" "$DIR/update/datafor-updater_$(date +%Y%m%d%H%M%S).jar"
+  fi
+  if [ -e pgsql/bin/pg_ctl ]; then
+      pgsql/bin/pg_ctl -D pgsql/data start
+  fi
+  CATALINA_OPTS="-Xms2048m -Xmx6144m -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8  -Djava.locale.providers=COMPAT,SPI -DDI_HOME=\"$DI_HOME\"  -Djava.awt.headless=true -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2"
+  export CATALINA_OPTS
+  cd "$DIR/tomcat/bin"
   sh startup.sh
 fi

@@ -24,7 +24,7 @@
       <includes>
         <include>**/*.sh</include>
       </includes>
-      <fileMode>0755</fileMode>
+      <fileMode>0700</fileMode>
     </fileSet>
     <fileSet>
       <directory>${project.basedir}/src/main/resources-filtered</directory>
@@ -40,7 +40,7 @@
       <includes>
         <include>*.sh</include>
       </includes>
-      <fileMode>0755</fileMode>
+      <fileMode>0700</fileMode>
     </fileSet>
     <fileSet>
       <directory>${resources.directory}/biserver</directory>
@@ -54,7 +54,7 @@
       <includes>
         <include>*.sh</include>
       </includes>
-      <fileMode>0755</fileMode>
+      <fileMode>0700</fileMode>
     </fileSet>
     <fileSet>
       <directory>${tomcat.directory}</directory>
@@ -92,7 +92,7 @@
           <include>**/*.sh</include>
         </includes>
       </unpackOptions>
-      <fileMode>0755</fileMode>
+      <fileMode>0700</fileMode>
       <outputDirectory>.</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>

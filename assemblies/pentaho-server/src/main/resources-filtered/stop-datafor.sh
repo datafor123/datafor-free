@@ -15,12 +15,12 @@
 # See the GNU General Public License for more details.
 #
 #
-# Copyright 2011 - ${copyright.year} Hitachi Vantara. All rights reserved.
+# Copyright 2011 - 2020 Hitachi Vantara. All rights reserved.
 # *******************************************************************************************
 
 ### ====================================================================== ###
 ##                                                                          ##
-##  Hitachi Vantara Start Script                                                    ##
+##  Hitachi Vantara Stop Script                                                     ##
 ##                                                                          ##
 ### ====================================================================== ###
 
@@ -29,25 +29,12 @@ cd $DIR_REL
 DIR=`pwd`
 #cd -
 
-. "$DIR/set-pentaho-env.sh"
+. "$DIR/set-datafor-env.sh"
 
 setPentahoEnv "$DIR/jre"
-
-### =========================================================== ###
-## Set a variable for DI_HOME (to be used as a system property)  ##
-## The plugin loading system for kettle needs this set to know   ##
-## where to load the plugins from                                ##
-### =========================================================== ###
-DI_HOME="$DIR"/pentaho-solutions/system/kettle
-
-if [ -f "$DIR/promptuser.sh" ]; then
-  sh "$DIR/promptuser.sh"
-  rm "$DIR/promptuser.sh"
-fi
-if [ "$?" = 0 ]; then
-  cd "$DIR/tomcat/bin"
-  CATALINA_OPTS="-Xms2048m -Xmx6144m -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8044 -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dfile.encoding=utf8 -Djava.locale.providers=COMPAT,SPI -DDI_HOME=\"$DI_HOME\""
-  export CATALINA_OPTS
-  JAVA_HOME=$_PENTAHO_JAVA_HOME
-  sh startup.sh
-fi
+pgsql/bin/pg_ctl -D pgsql/data stop
+cd "$DIR/tomcat/bin"
+JAVA_HOME=$_PENTAHO_JAVA_HOME
+export JAVA_HOME
+sh shutdown.sh
+ps -ef|grep java|grep datafor-server|awk {'print$2'}|sed -e "s/^/kill -9 /g"|sh
