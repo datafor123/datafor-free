@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <!-- set this to true for production, and false for development/localization -->
+  <cache-messages>true</cache-messages>
+  <!-- how far ahead to set the browser's cache -->
+  <max-age>2628001</max-age>
+  <cache>true</cache>
+    
+  <!-- roles with data access permissions -->
+  <datafor-auth-roles>Administrator</datafor-auth-roles>
+  <!-- users with data access permissions -->
+  <!--
+  <datafor-auth-users></datafor-auth-users>
+   -->
+  <!-- roles with datasource view permissions -->
+  <datafor-auth-view-roles>Authenticated,Administrator</datafor-auth-view-roles>
+  <!-- users with datasource view permissions -->
+  <datafor-auth-view-users>suzy</datafor-auth-view-users>
+  <!-- default view acls for user or role -->
+  <datafor-auth-default-view-acls>31</datafor-auth-default-view-acls>
+
+  <!-- settings for Agile Data Access -->
+  <datafor-auth-staging-jndi>Hibernate</datafor-auth-staging-jndi>
+
+  <datafor-auth-datasource-solution-storage>admin</datafor-auth-datasource-solution-storage>
+  <datafor-auth-csv-sample-rows>10000</datafor-auth-csv-sample-rows>
+  <datafor-auth-datasource-illegal-characters><![CDATA[$<>?&#%^*()!~:;[]{}|]]></datafor-auth-datasource-illegal-characters>
+
+  <!-- Agile Mart Datasource  -->
+  <agile-mart-staging-datasource>AgileBI</agile-mart-staging-datasource>
+  
+
+    <!-- Settings for the PUC "new" toolbar dropdown: priority, label, tabName, action-url, check if enabled url -->
+<!--    <new-toolbar-button>9,new Datafor Modeler,datafor-auth,api/repos/datafor-auth/new,plugin/data-access/api/permissions/hasDataAccess</new-toolbar-button>
+-->
+  <!--
+      Enables CSRF (Cross-Site Request Forgery) protection for this plugin,
+      if CSRF protection is also enabled for the server.
+
+      Default value: true (safe).
+
+      *ATTENTION*:
+        Setting this option to false opens the plugin to known security flaws,
+        which can allow an attacker to perform CSRF attacks.
+
+        Do NOT set this option to false
+        except in cases where CSRF protection must be enabled for the server but not for this plugin,
+        possibly because external code still exists which depends on the unprotected and deprecated APIs.
+    -->
+  <csrf-protection-enabled>true</csrf-protection-enabled>
+</settings>

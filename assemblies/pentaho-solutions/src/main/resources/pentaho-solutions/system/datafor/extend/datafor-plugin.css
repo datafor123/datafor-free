@@ -1,0 +1,6 @@
+.fileBrowserColumn .body .file .icon.datafor{
+	background: url("images/dataforFileType.png") no-repeat;
+}
+.fileBrowserColumn .body .file.selected  .icon.datafor{
+	background: url("images/dataforFileType.png") no-repeat;
+}

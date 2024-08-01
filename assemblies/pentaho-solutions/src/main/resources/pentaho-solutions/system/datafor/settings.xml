@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<cache>true</cache>
+	<cache-messages>true</cache-messages>
+	<max-age>108000</max-age>
+	<resources>
+		<downloadable-formats>css,js,svg,html,htm,png,jpg,jpeg,gif,swf,htc,ttf,otf,woff,ico,doc,docx,xls,xlsx,pdf,ppt,pptx</downloadable-formats>
+	</resources>
+	<new-toolbar-button>1,New Visual Report,Visual Report,api/repos/datafor/new</new-toolbar-button>
+</settings>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin title="Datafor Modeler" loader="OVERRIDING" name="datafor-auth">
+
+   <lifecycle-listener class="com.datafor.auth.datasource.wizard.service.impl.ModelerLifecycleListener"/>
+
+   <static-paths>
+     <static-path url="/datafor-auth" localFolder="resources"/>
+   </static-paths>
+
+
+  <external-resources>
+    <!--
+     **  Need these css includes here. adding them to the gwt module definition makes the load order unpredictable.
+     **  This unpredictability allows them to supercede the theme css files in some cases.
+     -->
+  </external-resources>
+    <overlays>
+        <!--<overlay id="launch" resourcebundle="api/repos/datafor-auth/resources/messages/messages" priority="10010">
+            <button id="launch-datafor-auth" label="${newEllipsis}" command="Home.openFile('${newEllipsis}','${newEllipsis}', 'plugin/datafor-auth/api/index');"/>
+        </overlay> -->
+        <!--<overlay id="startup.modeler"  resourcebundle="api/repos/datafor-auth/resources/messages/messages" loadatstart="false">
+            <menubar id="newmenu">
+                <menuitem id="new-datafor-auth" label="${newEllipsis}" command="mantleXulHandler.openUrl('${newEllipsis}','${newEllipsis}','plugin/datafor-auth/api/index')" />
+            </menubar>
+        </overlay>-->
+    </overlays>
+
+  <!-- ## CSRF (Cross-Site Request Forgery) protected endpoints ##
+      To enable/disable this plugin's CSRF protection,
+      set the `csrf-protection-enabled` setting in `settings.xml`.
+      -->
+  <csrf-protection>
+    <!--
+      POST /plugin/datafor-auth/api/datasource/analysis/{id}/remove
+    -->
+   <!-- <request-matcher type="regex" pattern="^/plugin/datafor-auth/api/datasource/analysis/[^/]*/remove\b.*" methods="POST" />-->
+  </csrf-protection>
+</plugin>

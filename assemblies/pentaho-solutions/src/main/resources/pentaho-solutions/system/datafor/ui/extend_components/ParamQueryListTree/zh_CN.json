@@ -1,0 +1,10 @@
+{
+  "description": "层级树表格组件",
+  "expand levels": "默认展开层",
+  "expand levels description": "默认展开层数",
+  "expand none": "不展开",
+  "group fields": "层次字段",
+  "name": "层级树表格",
+  "summary total": "合计",
+  "grand total": "总计"
+}

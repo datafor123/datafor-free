@@ -1,0 +1,8 @@
+{
+  "content wrap": "自动换行",
+  "content wrap description": "自动换行",
+  "field": "字段",
+  "name": "维度字段信息",
+  "name tip": "显示维度字段信息",
+  "optional measure": "度量（可选）"
+}

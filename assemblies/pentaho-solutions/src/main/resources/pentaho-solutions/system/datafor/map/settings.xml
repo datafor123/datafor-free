@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<defaultMap>osm</defaultMap>
+	<maps>
+		<map name="google">
+			<tileUrl>
+				<![CDATA[
+					http://mt2.google.com/vt/lyrs=r&scale=2&gl=en&x={x}&y={y}&z={z}
+				]]>
+			</tileUrl>
+			<geocodeUrl>
+				<![CDATA[
+					https://maps.googleapis.com/maps/api/geocode/json
+				]]>
+			</geocodeUrl>
+			<apiKey></apiKey>
+			<interval>0</interval>
+		</map>
+		<map name="gaode">
+			<tileUrl>
+				<![CDATA[
+					http://wprd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=2&style=7&ltype=7&x={x}&y={y}&z={z}
+				]]>
+			</tileUrl>
+			<geocodeUrl>
+				<![CDATA[
+					https://restapi.amap.com/v3/geocode/geo
+				]]>
+			</geocodeUrl>
+			<apiKey></apiKey>
+			<interval>0</interval>
+		</map>
+		<map name="osm">
+			<tileUrl>
+				<![CDATA[
+					https://tile.osm.org/{z}/{x}/{y}.png
+				]]>
+			</tileUrl>
+			<geocodeUrl>
+				<![CDATA[
+					https://nominatim.openstreetmap.org/search/
+				]]>
+			</geocodeUrl>
+			<apiKey></apiKey>	<!--api Key for the online api call-->
+			<interval>1200</interval><!--GeoCoding interval-->
+		</map>
+	</maps>
+</settings>

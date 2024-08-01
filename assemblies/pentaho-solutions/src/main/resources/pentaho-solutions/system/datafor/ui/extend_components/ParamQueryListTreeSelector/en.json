@@ -1,0 +1,9 @@
+{
+  "name": "Hierarchy Filter",
+  "name tooltip": "Hierarchy table filter",
+  "multiple": "Multiple",
+  "multiple desc": "Multiple selection",
+  "show all member": "Show all member",
+  "show all member desc": "Show all member item",
+  "all": "All"
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Hierarchy table",
+  "expand levels": "Expand",
+  "expand levels description": "The default number of layers to expand",
+  "expand none": "Collapse",
+  "group fields": "Hierarchy level fields",
+  "name": "Hierarchy table",
+  "summary total": "Summary",
+  "grand total": "Total"
+}

@@ -1,0 +1,21 @@
+{
+  "line options": "线条",
+  "line size": "线宽",
+  "line size desc": "线宽",
+  "line color": "线条颜色",
+  "line color desc": "线条颜色",
+  "line type": "线条类型",
+  "line type desc": "线条类型",
+  "line type solid": "实线",
+  "line type dashed": "虚线",
+  "line type dotted": "点线",
+  "rotate options": "旋转",
+  "rotate angle": "角度",
+  "rotate angle desc": "旋转角度",
+  "custom event": "自定义事件",
+  "custom click": "单击事件",
+  "custom click desc": "线条点击事件",
+  "name": "线条",
+  "name desc": "线条组件",
+  "name tip": "线条组件"
+}

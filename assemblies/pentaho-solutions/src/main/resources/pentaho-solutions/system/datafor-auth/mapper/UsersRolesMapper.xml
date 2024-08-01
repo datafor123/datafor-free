@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datafor.auth.mapper.UsersRolesRlMapper">
+
+    <select id="queryUserRolesList" resultType="java.util.HashMap">
+        SELECT u.authority as rolename,a."type"
+        FROM granted_authorities u ,authorities a where u.authority=a.authority AND u.username = #{username}
+    </select>
+
+    <select id="queryUserListByRoles" resultType="java.util.HashMap">
+        SELECT username as username
+        FROM granted_authorities u WHERE u.authority = #{rolesName}
+    </select>
+
+    <delete id="delete">
+        DELETE FROM granted_authorities
+        WHERE 1 = 1
+        <if test="username!=null and username!=''">
+            AND username = #{username}
+        </if>
+        <if test="authority!=null and authority!=''">
+            AND authority = #{authority}
+        </if>
+    </delete>
+
+    <insert id="insert">
+        INSERT INTO granted_authorities(username,authority,load_date) VALUES(#{username},#{authority},#{loadDate})
+    </insert>
+
+    <select id="queryIsLockRecordRoles" resultType="com.datafor.auth.vo.UsersRolesRl">
+        SELECT username,authority FROM granted_authorities WHERE username = #{username} AND authority='Lock Record';
+    </select>
+
+</mapper>

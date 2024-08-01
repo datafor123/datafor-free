@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datafor.auth.mapper.RolesMenuMapper">
+
+    <select id="queryMenuList" resultType="java.util.Map">
+        SELECT id,menu_name AS menuName,menu_key AS menuKey FROM menu
+    </select>
+
+    <select id="queryRolesMenuList" resultType="java.util.Map">
+        SELECT m.id, m.menu_name AS menuName,m.menu_key AS menuKey FROM roles_menu_rl c, menu m
+        WHERE c.menu_id = m.id AND c.roles_id = #{rolesId}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO roles_menu_rl(id,roles_id,menu_id) VALUES(nextval('roles_menu_rl_sql'),#{rolesId},#{menuId})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM roles_menu_rl
+        WHERE roles_id = #{rolesId}
+    </delete>
+
+</mapper>

@@ -1,0 +1,22 @@
+{
+  "component name": "List Box",
+  "component tooltip": "List Box Filter",
+  "component desc": "List box filter",
+  "search item in list": "Search in {count} records",
+  "list style": "List Box",
+  "actived color desc": "Selected font color",
+  "actived color": "Selected font color",
+  "actived background desc": "Selected background color",
+  "actived background": "Selected background color",
+  "search options": "Search",
+  "search enable": "Search",
+  "search enable desc": "Display search",
+  "search font": "Font",
+  "search font desc": "Search box font",
+  "search background": "Background color",
+  "search background desc": "Search box background color",
+  "search border color": "Border color",
+  "search border color desc": "Search box border color",
+  "search placeholder": "Search placeholder text",
+  "search placeholder desc": "Search box placeholder text"
+}

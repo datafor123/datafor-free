@@ -63,9 +63,14 @@
         <extension>xml</extension>
         <extension>xreportspec</extension>
       </MimeTypeDefinition>
-      <MimeTypeDefinition mimeType="application/octet-stream" hidden="false">
+      <MimeTypeDefinition mimeType="application/octet-stream" hidden="true">
         <extension>eml</extension>
+        <extension>datafor</extension>
       </MimeTypeDefinition>
+      <MimeTypeDefinition mimeType="application/json" hidden="true">
+        <extension>conf</extension>
+        <extension>json</extension>
+    </MimeTypeDefinition>
     </MimeTypeDefinitions>
   </ImportHandler>
   

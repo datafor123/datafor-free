@@ -1,0 +1,8 @@
+{
+  "component name": "百分比堆积条形图",
+  "component desc": "百分比堆积条形图",
+  "label content type": "显示内容",
+  "label content type desc": "标签文本显示内容",
+  "show original value": "显示原始值",
+  "show percent value": "显示百分比"
+}

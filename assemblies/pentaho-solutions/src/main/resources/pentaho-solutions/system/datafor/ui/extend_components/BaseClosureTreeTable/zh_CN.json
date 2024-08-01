@@ -1,0 +1,31 @@
+{
+	"name": "父子树表格",
+	"name tip": "父子结构数据表格",
+	"parent field": "父节点",
+	"parent field desc": "父节点字段",
+	"child field": "子节点",
+	"child field desc": "子节点字段",
+	"filed caption": "节点描述",
+	"filed caption desc": "节点显示名称",
+	"others fields": "其它字段",
+	"others fields desc": "父子结构外的其它字段，可以是指标或者维度字段",
+	"row height": "行高",
+	"row height desc": "表格行高",
+	"row hover bg": "悬停行背景色",
+	"row hover bg desc": "悬停行背景颜色",
+	"expand levels": "展开级数",
+	"expand levels desc": "指定从哪一级开始默认展开，不指定则没有收缩全部展开",
+	"cell bg event": {
+		"row data": "单元格所在行的行记录数据",
+		"column id": "单元格所在列id",
+		"row index": "单元格所在行索引",
+		"default color": "单元格背景默认使用的颜色代码",
+		"return desc": "返回值将作为单元格背景颜色代码",
+		"event desc": "单元格背景颜色自定义事件，该事件会在表格渲染更新每个单元格内容时被执行"
+	},
+	"content align": "内容对齐",
+	"content align desc": "内容对齐方式",
+	"no parent-child data": "没有有效的父子关系数据",
+	"indent size": "缩进",
+	"indent size desc": "行首缩进大小，单位px"
+}

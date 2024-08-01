@@ -1,0 +1,22 @@
+{
+  "component name": "列表框",
+  "component tooltip": "列表框筛选器",
+  "component desc": "列表框筛选器",
+  "search item in list": "在{count}条记录中搜索",
+  "list style": "列表框",
+  "actived color desc": "选中字体颜色",
+  "actived color": "选中字体颜色",
+  "actived background desc": "选中背景颜色",
+  "actived background": "选中背景颜色",
+  "search options": "搜索",
+  "search enable": "搜索",
+  "search enable desc": "显示搜索",
+  "search font": "字体",
+  "search font desc": "搜索框字体",
+  "search background": "背景色",
+  "search background desc": "搜索框背景色",
+  "search border color": "边框",
+  "search border color desc": "搜索框边框颜色",
+  "search placeholder": "搜索占位文本",
+  "search placeholder desc": "搜索框占位提示文本"
+}

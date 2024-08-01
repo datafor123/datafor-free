@@ -1,0 +1,32 @@
+{
+    "languages": [
+        {
+            "target": "en",
+            "description": "默认语言",
+            "sources": "all"
+        },
+        {
+            "target": "en",
+            "description": "English",
+            "sources": [
+                "en"
+            ]
+        },
+        {
+            "target": "ja",
+            "description": "ほうぶん",
+            "sources": [
+                "ja"
+            ]
+        },
+        {
+            "target": "zh",
+            "description": "中文-简体",
+            "sources": [
+                "zh",
+                "zh_CN"
+            ]
+        }
+    ],
+    "timeUpdated": "GIEECKAgJwuMrTA1Fz9MM9yvG1qSrRqcD9EYM9y3n1qSrzulDyAnMSOGJGEMrRqhD9IZIRAIHSWPF9H3D8c3nRu3FSEQFGtlET3kBHWXHyAVIREJE1uCn8E2F0gQoIb1Mzk="
+}

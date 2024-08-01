@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="datafor" name="datafor" loader="OVERRIDING">
+    <overlays>
+        <overlay id="launch" resourcebundle="content/datafor/lang/messages" priority="1">
+            <button id="launch-datafor" label="${Launcher.datafor}" command="Home.openFile('${Launcher.datafor.tooltip}','${Launcher.datafor}', 'api/repos/datafor/new');$('#btnCreateNew').popover('hide')"/>
+        </overlay>
+        <overlay id="startup.datafor" resourcebundle="content/datafor/lang/messages" priority="1">
+            <menubar id="newmenu">
+                <menuitem id="new-datafor" label="${Launcher.datafor}" command="mantleXulHandler.openUrl('${Launcher.datafor}','${Launcher.datafor.tooltip}','api/repos/datafor/new')"/>
+            </menubar>
+            <menubar id="toolsmenu">
+                <menuitem id="datafor-license" label="${Visualizer.settings}" insertafter="refreshmenu" command="mantleXulHandler.openUrl('${Visualizer.settings}','${Visualizer.settings}','plugin/datafor/api/ui/licenseUI.html')"/>
+            </menubar>
+        </overlay>
+    </overlays>
+
+    <!--<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/-->
+    <!--lifecycle-listener class="org.saiku.plugin.SaikuPluginLifecycleListener" /-->
+    <lifecycle-listener class="com.datafor.pc.plugin.DataforLifeCycleListener"/>
+    <content-types>
+        <content-type type="datafor" mime-type="text/html">
+            <title>Datafor Document</title>
+            <description>Datafor Document Design</description>
+            <icon-url>api/repos/datafor/ui/images/dataforFileType.png</icon-url>
+            <meta-provider>com.datafor.pc.dashboard.DataforContentTypeMetaProvider</meta-provider>
+            <operations>
+                <operation>
+                    <id>EDIT</id>
+                    <perspective>editor</perspective>
+                </operation>
+                <operation>
+                    <id>RUN</id>
+                    <perspective>run</perspective>
+                </operation>
+                <operation>
+                    <id>NEWWINDOW</id>
+                    <perspective>newwindow</perspective>
+                </operation>
+            </operations>
+        </content-type>
+    </content-types>
+
+    <static-paths>
+        <static-path url="/datafor/lang" localFolder="lang"/>
+        <static-path url="/datafor/ui" localFolder="ui"/>
+        <static-path url="/datafor/map" localFolder="map"/>
+        <static-path url="/datafor/extend" localFolder="extend"/>
+    </static-paths>
+
+    <external-resources>
+        <file context="mantle">content/datafor/extend/datafor-plugin.css</file>
+    </external-resources>
+
+</plugin>

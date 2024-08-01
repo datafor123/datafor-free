@@ -1,0 +1,22 @@
+{
+  "name": "Waterfall",
+  "desc": "Waterfall",
+  "field": "Field",
+  "field desc": "Please select a dimension field",
+  "measure": "Measure",
+  "measure desc": "Please select a measure",
+  "accumulation setting": "Accumulation",
+  "show accumulation": "Show",
+  "accumulation color": "Color",
+  "accumulation color desc": "Accumulation color",
+  "show accumulation desc": "Show accumulation",
+  "accumulation caption": "Caption",
+  "accumulation caption desc": "Accumulation caption",
+  "accumulation default label": "Accumulation",
+  "negative color": "Negative color",
+  "negative color desc": "Color when the value is less than 0, the condition color takes precedence over this color",
+  "positive color": "Positive color",
+  "positive color desc": "Color when the value is greater than 0, the condition color takes precedence over this color",
+  "color def": "Color definition",
+  "color def desc": "The color when the indicator value meets the condition, the condition color takes precedence over the positive and negative value colors"
+}

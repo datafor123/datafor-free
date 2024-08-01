@@ -1,0 +1,105 @@
+.fluid-container.flex {
+  min-width: 860px;
+  height: 100%;
+}
+.fluid-container.flex .ant-select-selection-item-remove {
+  display: none;
+}
+.fluid-container.flex .header-container {
+  height: 50px;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 2px 5px #eee;
+  position: relative;
+}
+.fluid-container.flex .header-container .query-time-container {
+  position: absolute;
+  right: 20px;
+}
+.fluid-container.flex .footer-container {
+  position: fixed;
+  bottom: 0px;
+  height: 52px;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  justify-content: flex-end;
+}
+.fluid-container.flex .footer-container > button {
+  margin-right: 15px;
+}
+.react-codemirror2 {
+  height: 100%;
+  font-size: 14px;
+}
+.react-codemirror2 .CodeMirror {
+  font-weight: 600;
+  height: 100%;
+  padding: 2px;
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: #f0f0f0;
+  box-shadow: 0px 0px 3px 1px inset #777777;
+}
+.react-codemirror2 .CodeMirror pre.CodeMirror-line,
+.react-codemirror2 .CodeMirror pre.CodeMirror-line-like {
+  color: #00697b;
+}
+.react-codemirror2 .CodeMirror pre.CodeMirror-placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+.react-codemirror2 .CodeMirror span.cm-atom {
+  color: #8501d5;
+}
+.react-codemirror2 .CodeMirror span.cm-string {
+  color: #24850c;
+}
+.react-codemirror2 .CodeMirror .CodeMirror-selected {
+  background-color: #6c9dd5 !important;
+}
+.react-codemirror2 .CodeMirror .CodeMirror-scrollbar-filler {
+  display: none!important;
+}
+.anticon.schema-node {
+  margin-right: 8px;
+  color: #c94f0f;
+}
+.preview-response-container {
+  position: relative;
+  width: 100%;
+}
+.ant-scrolling-effect {
+  z-index: 3001!important;
+}
+.metadata-search-button {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 7px 1px #42424275;
+  justify-content: end;
+  background-color: white;
+}
+.metadata-search-button > * {
+  margin: 0px 5px;
+}
+.metadata-search-button .ant-btn.datafor-icon-button-circle {
+  margin-right: 0px;
+}
+.ant-select-tree-list-holder {
+  overflow: hidden!important;
+}
+.ant-select-tree-list-holder.ps.ps--active-y {
+  position: relative;
+}
+
+
+/*# sourceMappingURL=dataInterface.css.map*/

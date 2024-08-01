@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+       xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+       xmlns:pen="http://www.pentaho.com/schema/pentaho-system"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+                           http://jax-ws.dev.java.net/spring/core http://jax-ws.dev.java.net/spring/core.xsd
+                           http://jax-ws.dev.java.net/spring/servlet http://jax-ws.dev.java.net/spring/servlet.xsd
+						   http://www.pentaho.com/schema/pentaho-system http://www.pentaho.com/schema/pentaho-system.xsd"
+       default-lazy-init="true">
+
+    <context:annotation-config/>
+
+    <bean id="api" class="com.datafor.auth.plugin.ExtendedJAXRSPluginServlet"/>
+    <bean class="com.datafor.auth.DataforAuthResource"/>
+
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="jdbc:postgresql://localhost:25432/datafor"></property>
+        <property name="username" value="postgres"></property>
+        <property name="password" value="postgres"></property>
+        <property name="initialSize" value="20"></property>
+        <property name="maxActive" value="100"></property>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <property name="typeAliasesPackage" value="com.datafor.auth.vo"></property>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+        <property name="basePackage" value="com.datafor.auth.mapper"/>
+    </bean>
+
+    <bean id="rolesMenuService" class="com.datafor.auth.service.RolesMenuService">
+        <property name="rolesMenuMapper" ref="rolesMenuMapper"></property>
+    </bean>
+
+    <bean id="usersRolesRlService" class="com.datafor.auth.service.UsersRolesRlService">
+        <property name="usersRolesRlMapper" ref="usersRolesRlMapper"></property>
+    </bean>
+
+    <bean id="usersService" class="com.datafor.auth.service.UsersService">
+        <property name="usersMapper" ref="usersMapper"></property>
+        <property name="usersRolesRlService" ref="usersRolesRlService"></property>
+    </bean>
+    <bean id="rolesService" class="com.datafor.auth.service.RolesService">
+        <property name="rolesMapper" ref="rolesMapper"></property>
+        <property name="usersRolesRlService" ref="usersRolesRlService"></property>
+        <property name="rolesMenuService" ref="rolesMenuService"></property>
+    </bean>
+    <bean id="notifyService" class="com.datafor.auth.service.NotifyService"/>
+    <bean id="dataforUser" class="com.datafor.auth.DataforUserResource">
+        <property name="usersService" ref="usersService"></property>
+        <property name="notifyService" ref="notifyService"></property>
+    </bean>
+
+    <bean id="rolesResource" class="com.datafor.auth.RolesResource">
+        <property name="rolesService" ref="rolesService"></property>
+    </bean>
+
+    <bean id="usersRolesResource" class="com.datafor.auth.UsersRolesResource">
+        <property name="usersRolesRlService" ref="usersRolesRlService"></property>
+    </bean>
+
+    <bean id="rolesMenuResource" class="com.datafor.auth.RolesMenuResource">
+        <property name="rolesMenuService" ref="rolesMenuService"></property>
+    </bean>
+
+    <bean id="emailRresource" class="com.datafor.auth.EmailResource"/>
+
+
+    <!--<bean class="org.pentaho.platform.web.servlet.PentahoSerializationPolicy">
+      <property name="whiteList">
+        <util:list>
+        </util:list>
+      </property>
+       <pen:publish as-type="CLASSES">
+         <pen:attributes>
+           <pen:attr key="plugin" value="datafor-auth-plugin"/>
+         </pen:attributes>
+       </pen:publish>
+     </bean>-->
+    <bean class="com.datafor.auth.security.policy.rolebased.actions.DatasourceManageAction">
+        <pen:publish as-type="INTERFACES">
+            <pen:attributes>
+                <pen:attr key="priority" value="70"/>
+            </pen:attributes>
+        </pen:publish>
+    </bean>
+
+    <bean id="dataAccessViewPermissionHandler"
+          class="com.datafor.auth.datasource.wizard.service.impl.SimpleDataAccessViewPermissionHandler">
+        <pen:publish as-type="INTERFACES"/>
+    </bean>
+    <bean id="dataAccessPermissionHandler"
+          class="com.datafor.auth.datasource.wizard.service.impl.SimpleDataAccessPermissionHandler">
+        <pen:publish as-type="INTERFACES"/>
+    </bean>
+
+    <bean class="com.datafor.auth.datasource.wizard.service.impl.PlatformStagingDatabase">
+        <pen:publish as-type="INTERFACES">
+            <pen:attributes>
+                <pen:attr key="priority" value="70"/>
+            </pen:attributes>
+        </pen:publish>
+    </bean>
+
+    <bean id="inlineModeling" class="org.pentaho.agilebi.modeler.models.annotations.ModelingSchemaAnnotator"/>
+    <bean id="dataforCoreResources" class="com.datafor.auth.DataforCoreResources"/>
+</beans>
+

@@ -1,0 +1,8 @@
+{
+  "component name": "Radio/Checkbox",
+  "component description": "Radio/Checkbox Filter",
+  "component desc": "Radio/Checkbox filter for selection",
+  "group style": "Font",
+  "selected color": "Selected font color",
+  "selected color desc": "Selected font color"
+}

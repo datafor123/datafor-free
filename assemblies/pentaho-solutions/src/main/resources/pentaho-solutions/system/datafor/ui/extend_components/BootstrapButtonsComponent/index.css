@@ -1,0 +1,36 @@
+.v-buttons-component-group .panel-heading {
+  max-height: none!important;
+  min-height: unset!important;
+  padding: 0px 15px;
+  align-items: center;
+}
+.v-buttons-component-group .panel-body,
+.v-buttons-component-group .c-ui{
+  overflow: visible!important;
+}
+.v-buttons-component-group button{
+  box-shadow: none;
+  text-shadow: none;
+  position: relative;
+  height: unset;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.v-buttons-component-group button>span{
+  font: inherit!important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+
+.v-buttons-component-group-grid{
+  display: block;
+  position: absolute;
+  right: -2.5px;
+  top: 20%;
+  width: 1px;
+  background-color: #333;
+  height: 60%;
+}

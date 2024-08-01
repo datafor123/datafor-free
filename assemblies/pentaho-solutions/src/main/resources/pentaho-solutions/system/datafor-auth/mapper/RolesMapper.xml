@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datafor.auth.mapper.RolesMapper">
+
+    <select id="queryList" resultType="com.datafor.auth.vo.Roles">
+        SELECT authority,description,load_date AS loadDate, type FROM authorities
+        WHERE 1 = 1
+        <if test="authority!=null and authority!=''">
+            AND authority LIKE concat('%',#{authority},'%')
+        </if >
+        <if test="type!=null and type!=''">
+            AND type = #{type}
+        </if >
+        ORDER BY load_date DESC
+    </select>
+
+    <select id="queryListCount" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM authorities
+        WHERE 1 = 1
+        <if test="authority!=null and authority!=''">
+            AND authority LIKE concat('%',#{authority},'%')
+        </if >
+        <if test="type!=null and type!=''">
+            AND type = #{type}
+        </if >
+    </select>
+
+    <insert id="insert" parameterType="com.datafor.auth.vo.Roles">
+		INSERT INTO authorities(
+			authority,
+			description,
+			load_date,
+			type
+		) VALUES (
+			#{authority},
+			#{description},
+			#{loadDate},
+			#{type}
+		)
+	</insert>
+
+    <select id="detail" resultType="com.datafor.auth.vo.Roles">
+        SELECT authority,description FROM authorities
+        WHERE 1 = 1
+        <if test="authority!=null and authority!=''">
+            AND authority = #{authority}
+        </if>
+    </select>
+<!--系统角色不允许删除-->
+    <select id="delete">
+        DELETE FROM authorities WHERE authority = #{authority} and type = '0'
+    </select>
+
+</mapper>

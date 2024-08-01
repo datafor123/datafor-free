@@ -1,0 +1,10 @@
+{
+  "component name": "按钮",
+  "component tooltip": "按钮筛选器",
+  "component description": "按钮筛选器",
+  "button group style": "颜色和边框",
+  "button grid": "按钮分割线",
+  "button grid desc": "显示按钮分割线",
+  "button align": "对齐",
+  "button align desc": "按钮的对齐方式"
+}

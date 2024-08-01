@@ -1,0 +1,1439 @@
+{
+    "TimeYears": [
+        {
+            "format": "yyyy",
+            "caption": "2005 (yyyy)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年",
+            "caption": "2005年 (yyyy年)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        }
+    ],
+    "TimeQuarters": [
+        {
+            "format": "q",
+            "caption": "1 (q)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "q季度",
+            "caption": "1季度 (q季度)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyyq",
+            "caption": "20051 (yyyyq)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-q",
+            "caption": "2005-1 (yyyy-q)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年q季度",
+            "caption": "2005年1季度 (yyyy年q季度)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "'Q'q",
+            "caption": "Q1 ('Q'q)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "'QTR'q",
+            "caption": "QTR1 ('QTR'q)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        }
+    ],
+    "TimeMonths": [
+        {
+            "format": "M",
+            "caption": "6 (M)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MM",
+            "caption": "06 (MM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M月",
+            "caption": "6月 (M月)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "MM月",
+            "caption": "06月 (MM月)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyyM",
+            "caption": "20056 (yyyyM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-M",
+            "caption": "2005-6 (yyyy-M)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyyMM",
+            "caption": "200506 (yyyyMM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-MM",
+            "caption": "2005-06 (yyyy-MM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy/M",
+            "caption": "2005/6 (yyyy/M)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yy/M",
+            "caption": "05/6 (yy/M)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy/MM",
+            "caption": "2005/06 (yyyy/MM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yy/MM",
+            "caption": "05/06 (yy/MM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年M月",
+            "caption": "2005年6月 (yyyy年M月)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy年MM月",
+            "caption": "2005年06月 (yyyy年MM月)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy MMM",
+            "caption": "2005 Jun (yyyy MMM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MMM",
+            "caption": "Jun (MMM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MMMM",
+            "caption": "June (MMMM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy MMMM",
+            "caption": "2005 June (yyyy MMMM)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        }
+    ],
+    "TimeWeeks": [
+        {
+            "format": "w",
+            "caption": "9 (w)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "ww",
+            "caption": "09 (ww)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "w周",
+            "caption": "9周 (w周)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "ww周",
+            "caption": "09周 (ww周)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyyw",
+            "caption": "200509 (yyyyw)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-w",
+            "caption": "2005-9 (yyyy-w)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyyww",
+            "caption": "200509 (yyyyww)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-ww",
+            "caption": "2005-09 (yyyy-ww)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年w周",
+            "caption": "2005年9周 (yyyy年w周)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy年ww周",
+            "caption": "2005年09周 (yyyy年ww周)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        }
+    ],
+    "TimeDays": [
+        {
+            "format": "d",
+            "caption": "7 (d)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "dd",
+            "caption": "07 (dd)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M-d",
+            "caption": "6-7 (M-d)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M/d",
+            "caption": "6/7 (M/d)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MM-dd",
+            "caption": "06-07 (MM-dd)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MM/dd",
+            "caption": "06/07 (MM/dd)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M/d/yy",
+            "caption": "7/16/21 (M/d/yy)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MM/dd/yyyy",
+            "caption": "07/16/2005 (MM/dd/yyyy)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "d-MMM",
+            "caption": "17-Jan (d-MMM)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "d-MMM-yy",
+            "caption": "17-Jan-21 (d-MMM-yy)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "d MMM",
+            "caption": "17 Jan (d MMM)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MMM d",
+            "caption": "Jan 17(MMM d)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MMM d, yyyy",
+            "caption": "Jan 17, 2021(MMM d, yyyy)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M月d日",
+            "caption": "6月7日 (M月d日)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "MM月dd日",
+            "caption": "06月07日 (MM月dd日)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyyMMdd",
+            "caption": "20050607 (yyyyMMdd)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-M-d",
+            "caption": "2005-6-7 (yyyy-M-d)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy/M/d",
+            "caption": "2005/6/7 (yyyy/M/d)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-MM-dd",
+            "caption": "2005-06-07 (yyyy-MM-dd)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy/MM/dd",
+            "caption": "2005/06/07 (yyyy/MM/dd)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年M月d日",
+            "caption": "2005年6月7日 (yyyy年M月d日)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy年MM月dd日",
+            "caption": "2005年06月07日 (yyyy年MM月dd日)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy-MM-dd HH:mm:ss",
+            "caption": "2005-06-07 15:32:25 (yyyy-MM-dd HH:mm:ss)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-MM-dd HH:mm:ss.SSS",
+            "caption": "2005-06-07 15:32:25.7 (yyyy-MM-dd HH:mm:ss.SSS)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        }
+    ],
+    "TimeHours": [
+        {
+            "format": "H",
+            "caption": "5 (H)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "HH",
+            "caption": "05 (HH)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "H时",
+            "caption": "5时 (H时)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "HH时",
+            "caption": "05时 (HH时)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        }
+    ],
+    "TimeMinutes": [
+        {
+            "format": "m",
+            "caption": "5 (m)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "mm",
+            "caption": "05 (mm)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "HH:mm",
+            "caption": "07:05 (HH:mm)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "m分",
+            "caption": "5分 (m分)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "mm分",
+            "caption": "05分 (mm分)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "HH时mm分",
+            "caption": "07时05分 (HH时mm分)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        }
+    ],
+    "TimeSeconds": [
+        {
+            "format": "s",
+            "caption": "5 (s)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "ss",
+            "caption": "05 (ss)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "s秒",
+            "caption": "5秒 (s秒)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "ss秒",
+            "caption": "05秒 (ss秒)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy-MM-dd HH:mm:ss",
+            "caption": "2012-02-05 06:03:07 (yyyy-MM-dd HH:mm:ss)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-M-d H:m:s",
+            "caption": "2012-2-5 6:3:7 (yyyy-M-d H:m:s)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy/M/d H:m:s",
+            "caption": "2012/2/5 6:3:7 (yyyy/M/d H:m:s)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M/d",
+            "caption": "2/25 (M/d)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "M/d H:m:s",
+            "caption": "2/5 6:3:7 (M/d H:m:s)",
+            "locale": "en",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年MM月dd日 HH时mm分ss秒",
+            "caption": "2012年02月05日 06时03分07秒 (yyyy年MM月dd日 HH时mm分ss秒)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy年M月d日 H时m分s秒",
+            "caption": "2012年2月5日 6:3:7 (yyyy年M月d日 H时m分s秒)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy年M月d日",
+            "caption": "2012年2月5日 (yyyy年M月d日)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy-MM-dd",
+            "caption": "2012-02-15 (yyyy-MM-dd)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "dd/MM/yyyy",
+            "caption": "22/03/2015 (dd/MM/yyyy)",
+            "locale": "zh",
+            "loginLocale": [
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy/MM/dd",
+            "caption": "2012/02/15 (yyyy/MM/dd)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy年M月",
+            "caption": "2012年2月 (yyyy年M月)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy年",
+            "caption": "2012年 (yyyy年)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN"
+            ]
+        },
+        {
+            "format": "yyyy",
+            "caption": "2012 (yyyy)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "yyyy-MM",
+            "caption": "2012-03 (yyyy-MM)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MM",
+            "caption": "03 (MM)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "dd",
+            "caption": "21 (dd)",
+            "locale": "zh",
+            "loginLocale": [
+                "zh",
+                "zh_CN",
+                "zh-CN",
+                "en",
+                "en-US",
+                "en_US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "d-MMM",
+            "caption": "17-Jan (d-MMM)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "d-MMM-yy",
+            "caption": "17-Jan-21 (d-MMM-yy)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "d MMM",
+            "caption": "17 Jan (d MMM)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MMM d",
+            "caption": "Jan 17(MMM d)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        },
+        {
+            "format": "MMM d, yyyy",
+            "caption": "Jan 17, 2021(MMM d, yyyy)",
+            "locale": "en",
+            "loginLocale": [
+                "en",
+                "en_US",
+                "en-US",
+                "ja",
+                "de",
+                "it",
+                "fr"
+            ]
+        }
+    ]
+}

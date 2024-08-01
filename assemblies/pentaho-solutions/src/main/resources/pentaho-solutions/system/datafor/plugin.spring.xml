@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://jax-ws.dev.java.net/spring/core" xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+  xmlns:pen="http://www.pentaho.com/schema/pentaho-system"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://jax-ws.dev.java.net/spring/core http://jax-ws.dev.java.net/spring/core.xsd
+                           http://jax-ws.dev.java.net/spring/servlet http://jax-ws.dev.java.net/spring/servlet.xsd
+                           http://www.pentaho.com/schema/pentaho-system http://www.pentaho.com/schema/pentaho-system.xsd">
+
+	<context:annotation-config />
+  
+	<bean id="api" class="org.saiku.plugin.resources.ExtendedJAXRSPluginServlet"/>
+	
+	<bean id="apiResource" class="com.datafor.pc.dashboard.web.api.DataforServiceResources">
+		<property name="discover" ref="dataforDiscover" />
+	</bean>
+	<bean id="dataforDingdingAuthLogin" class="com.datafor.extension.dingding.DingDingAuthLogin" scope="prototype">
+	<property name="appKey" value="" />
+	<property name="appSecret" value="" />
+	<property name="agentId" value="" />
+	</bean>
+	
+	
+	<bean id="datafor" class="com.datafor.pc.dashboard.DataforDashboardContentGenerator" scope="prototype"/>
+	<bean id="datafor.new" class="com.datafor.pc.dashboard.DataforDashboardContentGenerator" scope="prototype">
+		<property name="mode" value="new" />
+		<property name="modePath" value="$webappName/plugin/datafor/api/createDo" />
+	</bean>
+	<bean id="datafor.run" class="com.datafor.pc.dashboard.DataforDashboardContentGenerator" scope="prototype">
+		<property name="mode" value="run" />
+		<property name="modePath" value="$webappName/plugin/datafor/api/open/" />
+	</bean>
+	<bean id="datafor.newwindow" class="com.datafor.pc.dashboard.DataforDashboardContentGenerator" scope="prototype">
+		<property name="mode" value="newwindow" />
+		<property name="modePath" value="$webappName/plugin/datafor/api/open/" />
+	</bean>
+	<bean id="datafor.editor" class="com.datafor.pc.dashboard.DataforDashboardContentGenerator" scope="prototype">
+		<property name="mode" value="editor" />
+		<property name="modePath" value="$webappName/plugin/datafor/api/edit/" />
+	</bean>
+	
+	<bean id="dataforDiscover" class="com.datafor.pc.dashboard.saiku.api.DataforDiscoverResource" scope="singleton">
+		<property name="olapDiscoverService" ref="olapDiscoverServiceBean" />
+	</bean>
+	<!--gcy effect -->
+	<bean id="dataforDiscoverServiceBean" class="com.datafor.pc.dashboard.service.DataforDiscoverService">
+		<property name="datasourceService" ref="datasourceServiceBean" />
+	</bean>
+
+	<bean id="dataforCoreResources" class="com.datafor.pc.dashboard.web.api.DataforCoreResources" scope="prototype"/>
+	<bean id="dataforVersionResource" class="com.datafor.pc.dashboard.web.api.DataforVersionResource" scope="singleton"/>
+	    <!--非必须第三方调用接口登录需要-->
+	<bean id="dataforAuthLogin" class="com.datafor.pc.dashboard.web.api.DataforAuthLogin" scope="singleton">
+		<property name="syspwd" value="" />
+	</bean>
+	<bean id="dataforModelerResource" class=" com.datafor.pc.dashboard.web.api.DataforModelerResource" scope="prototype">
+		<property name="thinQueryService" ref="thinQueryBean" />
+	</bean>
+	<bean id="dataforModelerConnectionResource" class=" com.datafor.pc.dashboard.web.api.DataforModelerConnectionResource" scope="prototype">
+	</bean>
+	<bean id="dataforModelerParameterResource" class=" com.datafor.pc.dashboard.web.api.DataforModelerParameterResource" scope="prototype">
+	</bean>
+	<bean id="dataforModelerFileResource" class=" com.datafor.pc.dashboard.web.api.DataforModelerFileResource" scope="prototype">
+  </bean>
+  <bean id="dataforModelerOlapConfigResource" class=" com.datafor.pc.dashboard.web.api.DataforModelerOlapConfigResource" scope="prototype">
+	</bean>
+	<bean id="dataforUserSettingsResource" class=" com.datafor.pc.dashboard.web.api.DataforUserSettingsResource" scope="prototype">
+	</bean>
+	<bean id="dataforGlobalSettingsResource" class=" com.datafor.pc.dashboard.web.api.DataforGlobalSettingsResource">
+	</bean>
+	<bean id="dataforModelerMapConfigResource" class=" com.datafor.pc.dashboard.web.api.DataforModelerMapConfigResource" scope="prototype">
+	</bean>
+	<bean id="dataforLicenseResources" class=" com.datafor.pc.dashboard.web.api.DataforLicenseResources" scope="prototype">
+	</bean>
+	<bean id="dataforPluginResources" class=" com.datafor.pc.dashboard.web.api.DataforPluginResource"/>
+	<!-- end -->
+	
+	<bean id="dataforQuery" class="com.datafor.pc.dashboard.saiku.api.DataforQueryResource" scope="singleton"> 
+		<property name="thinQueryService" ref="thinQueryBean" />
+		<property name="userService" ref="userServiceBean"/>
+		<!-- end -->
+	</bean>
+	
+	<bean id="restQueryApi" class="com.datafor.pc.dashboard.web.api.DataforRestQueryService">
+		<property name="discover" ref="dataforDiscover" />
+		<property name="query" ref="dataforQuery"/>
+	</bean>
+	
+	
+	<!-- saiku define beans -->
+	<bean id="thinQueryBean" class="org.saiku.service.olap.ThinQueryService" scope="singleton">
+		<property name="olapDiscoverService" ref="olapDiscoverServiceBean" />
+	</bean>
+
+	<!-- 2018-11-02 licheng added -->
+	<bean id="sessionService" class="org.saiku.plugin.PentahoSessionServiceSeven">
+		<property name="userService" ref="userServiceBean"/>
+		<!--<property name="l" ref="licenseUtilsBeanPlugin"/>-->
+	</bean>
+	
+	<bean id="userServiceBean" class="org.saiku.service.user.UserService">
+		<property name="datasourceService" ref="datasourceServiceBean"/>
+		<property name="iDatasourceManager" ref="pentahoDsManager"/>
+		<property name="adminRoles">
+			<list>
+				<value>Administrator</value>
+			</list>
+		</property>
+		<property name="sessionService" ref="sessionService"/>
+	</bean>
+	<bean id="pentahoDsManager" class="org.saiku.plugin.PentahoSecurityAwareDatasourceManager" scope="singleton">
+		<property name="datasourceResolverClass" value="org.saiku.plugin.PentahoDataSourceResolver" />
+		<!-- <property name="dynamicSchemaProcessor" value="mondrian.i18n.LocalizingDynamicSchemaProcessor" /> -->
+	</bean>
+
+	<bean id="connectionManager" class="org.saiku.plugin.PentahoSecurityAwareConnectionManager" scope="singleton">
+		<property name="dataSourceManager" ref="pentahoDsManager" />
+		<property name="userAware" value="true" />
+		<property name="connectionPooling" value="true" />
+	</bean>
+
+	<bean id="datasourceServiceBean" class="org.saiku.service.datasource.DatasourceService">
+		<property name="connectionManager" ref="connectionManager" />
+	</bean>
+
+	<bean id="olapDiscoverServiceBean" class="org.saiku.service.olap.OlapDiscoverService">
+		<property name="datasourceService" ref="datasourceServiceBean" />
+	</bean>
+
+	<!-- end wrap saiku api-->
+	
+	<bean class="org.pentaho.platform.engine.core.system.objfac.spring.ApplicationContextPentahoSystemRegisterer" scope="singleton"/>
+	<bean class="org.pentaho.platform.engine.core.solution.ContentInfo">
+		<property name="mimeType" value="text/html"/>
+		<property name="extension" value=".datafor"/>	
+		<property name="canImport" value="true"/>
+		<property name="canExport" value="true"/>		
+	<pen:publish as-type="INTERFACES"/>
+  </bean>
+
+  
+</beans>

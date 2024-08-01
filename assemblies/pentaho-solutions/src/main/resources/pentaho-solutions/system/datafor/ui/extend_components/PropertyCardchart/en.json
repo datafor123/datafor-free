@@ -1,0 +1,8 @@
+{
+  "content wrap": "Word wrap",
+  "content wrap description": "Word wrap",
+  "field": "Level",
+  "name": "Dimension level's value",
+  "name tip": "Show dimension level's value",
+  "optional measure": "Measure (optional)"
+}

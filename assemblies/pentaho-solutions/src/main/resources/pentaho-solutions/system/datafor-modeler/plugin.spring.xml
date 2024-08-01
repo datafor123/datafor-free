@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://jax-ws.dev.java.net/spring/core" xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+  xmlns:pen="http://www.pentaho.com/schema/pentaho-system"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+                           http://jax-ws.dev.java.net/spring/core http://jax-ws.dev.java.net/spring/core.xsd
+                           http://jax-ws.dev.java.net/spring/servlet http://jax-ws.dev.java.net/spring/servlet.xsd
+						   http://www.pentaho.com/schema/pentaho-system http://www.pentaho.com/schema/pentaho-system.xsd"
+                           default-lazy-init="true">
+
+  <context:annotation-config />
+
+  <bean id="api" class="com.datafor.modeler.plugin.ExtendedJAXRSPluginServlet"/>
+  <bean class="com.datafor.modeler.ModelerResource" scope="prototype"/>
+  <!--save connection cannot be removed-->
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.DatabaseConnectionReaderWriter" scope="singleton"/>
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.DatabaseConnectionListReaderWriter" scope="singleton"/>
+ <!--<bean class="org.pentaho.platform.web.servlet.PentahoSerializationPolicy">
+   <property name="whiteList">
+     <util:list>
+     </util:list>
+   </property>
+	<pen:publish as-type="CLASSES">
+	  <pen:attributes>
+		<pen:attr key="plugin" value="datafor-modeler-plugin"/>
+	  </pen:attributes>
+	</pen:publish>
+  </bean>-->
+  <bean class="com.datafor.modeler.security.policy.rolebased.actions.DatasourceManageAction">
+  	<pen:publish as-type="INTERFACES">
+	    <pen:attributes>
+	      <pen:attr key="priority" value="70"/>
+	    </pen:attributes>
+  	</pen:publish>
+  </bean>
+
+  <bean id="dataAccessViewPermissionHandler" class="com.datafor.modeler.datasource.wizard.service.impl.SimpleDataAccessViewPermissionHandler">
+  	<pen:publish as-type="INTERFACES" />
+  </bean>
+  <bean id="dataAccessPermissionHandler" class="com.datafor.modeler.datasource.wizard.service.impl.SimpleDataAccessPermissionHandler">
+  	<pen:publish as-type="INTERFACES" />
+  </bean>
+
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.PlatformStagingDatabase">
+  	<pen:publish as-type="INTERFACES">
+	    <pen:attributes>
+	      <pen:attr key="priority" value="70"/>
+	    </pen:attributes>
+  	</pen:publish>
+  </bean>
+
+  <bean id="inlineModeling" class="org.pentaho.agilebi.modeler.models.annotations.ModelingSchemaAnnotator"/>
+  <bean id="dataforCoreResources" class="com.datafor.modeler.DataforCoreResources" scope="prototype"/>
+    <bean id="dataforModelerDirectoryResource" class="com.datafor.modeler.DirectoryResource"/>
+  <bean id="dataforModelerFileResource" class="com.datafor.modeler.FileResource" scope="prototype"/>
+  <bean id="dataforModelerParameterResource" class="com.datafor.modeler.ParameterResource" scope="prototype"/>
+  <bean id="dataforModelerAuthConfigResource" class="com.datafor.modeler.AuthConfigResource" scope="prototype"/>
+  <bean id="dataforModelerAuthConfigRowResource" class="com.datafor.modeler.AuthConfigRowResource" scope="prototype"/>
+  <bean id="dataforModelerFieldMapConfigResource" class="com.datafor.modeler.FieldMapConfigResource" scope="prototype"/>
+  <bean id="dataforModelerDictResource" class="com.datafor.modeler.DictResource" scope="prototype"/>
+  <bean id="dataforModelerDictMapResource" class="com.datafor.modeler.DictMapResource" scope="prototype"/>
+  <bean id="dataforModelerQueryConfigResource" class="com.datafor.modeler.QueryConfigResource" scope="prototype"/>
+  <bean id="uploadDatasetResource" class="com.datafor.modeler.UploadDatasetResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.TokenResource" scope="prototype"/>
+  <bean id="notifyService" class="com.datafor.modeler.auth.NotifyService"/>
+  <bean class="com.datafor.modeler.EmailResource" scope="prototype">
+  	 <property name="notifyService" ref="notifyService"></property>
+  </bean>
+  
+  <bean class="com.datafor.modeler.UserRoleResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.UserSettingsResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.GlobalSettingsResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.DriverManagerResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.LineageResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.DatasourceResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.AnalysisDatasourceService" scope="prototype"/>
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.ConnectionService" scope="prototype"/>
+  <bean class="com.datafor.modeler.datasource.api.resources.AnalysisResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.DataAccessPermissionResource" scope="prototype"/>
+  <bean class="com.datafor.modeler.datasource.wizard.service.impl.DatabaseDialectService" scope="prototype"/>
+</beans>
+

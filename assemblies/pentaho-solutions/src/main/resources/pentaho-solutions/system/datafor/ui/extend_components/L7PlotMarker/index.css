@@ -1,0 +1,11 @@
+.l7plot-tooltip-container{
+  background-color: rgba(0,0,0,0.9);
+  padding: 5px 10px;
+  pointer-events: none!important;
+}
+.l7plot-tooltip-container *{
+  pointer-events: none!important;
+}
+.l7plot-tooltip-container span{
+  color: white!important;
+}

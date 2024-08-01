@@ -1,0 +1,22 @@
+{
+  "name": "瀑布图",
+  "desc": "瀑布图",
+  "field": "字段",
+  "field desc": "请选择一个维度字段",
+  "measure": "度量",
+  "measure desc": "请选择一个度量",
+  "accumulation setting": "累计值",
+  "show accumulation": "显示",
+  "accumulation color": "累计值颜色",
+  "accumulation color desc": "累计值颜色",
+  "show accumulation desc": "显示累计值",
+  "accumulation caption": "名称",
+  "accumulation caption desc": "累计值名称",
+  "accumulation default label": "累计值",
+  "negative color": "负值颜色",
+  "negative color desc": "指标值小于0时的颜色，条件颜色生效优先级大于此颜色",
+  "positive color": "正值颜色",
+  "positive color desc": "指标值大于0时的颜色，条件颜色生效优先级大于此颜色",
+  "color def": "条件颜色",
+  "color def desc": "指标值满足条件时的颜色，条件颜色生效优先级大于正负值颜色"
+}

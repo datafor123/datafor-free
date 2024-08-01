@@ -1,0 +1,13 @@
+{
+  "name": "层级表筛选",
+  "name tooltip": "层级表格筛选组件",
+  "multiple": "多选",
+  "multiple desc": "是否多选模式",
+  "show all member": "显示所有成员",
+  "show all member desc": "是否显示所有成员",
+  "all": "所有",
+  "selected background": "选中行背景",
+  "selected background desc": "选中行背景色",
+  "selected color": "选中行颜色",
+  "selected color desc": "选中行字体颜色"
+}

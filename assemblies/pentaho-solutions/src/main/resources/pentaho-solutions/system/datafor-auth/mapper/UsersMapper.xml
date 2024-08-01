@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datafor.auth.mapper.UsersMapper">
+
+    <select id="queryList" resultType="com.datafor.auth.vo.Users">
+        SELECT
+        <if test="fields==null or enabled==''">
+            username ,name,title,company,dept,dob,mobile,enabled,create_time,update_time,email,description
+        </if >
+        <if test="fields!=null">
+            ${fields}
+        </if >
+        FROM users
+        WHERE 1 = 1
+        <if test="filters!=null">
+            <foreach collection="filters" item="filter" index="index" separator="">
+                AND (
+                username LIKE #{filter}
+                OR name LIKE #{filter}
+                OR title LIKE #{filter}
+                OR company LIKE #{filter}
+                OR dept LIKE #{filter}
+                OR mobile LIKE #{filter}
+                OR email LIKE #{filter}
+                )
+            </foreach>
+        </if >
+        <if test="enabled!=null and enabled!=''">
+            AND enabled = #{enabled}
+        </if >
+        <if test="orderBy!=null and orderBy!=''">
+            ORDER BY ${orderBy}
+        </if >
+        <if test="start!=null">
+            OFFSET #{start}
+        </if >
+        <if test="count!=null">
+            LIMIT #{count}
+        </if >
+    </select>
+    <select id="querySpecialList" resultType="com.datafor.auth.vo.Users">
+        SELECT
+        <if test="fields==null or enabled==''">
+            username
+        </if >
+        <if test="fields!=null">
+            ${fields}
+        </if >
+        FROM users
+        WHERE 1 = 1
+        <if test="filters!=null">
+            <foreach collection="filters" item="filter" index="index" separator="">
+                AND (
+                username LIKE #{filter}
+                OR name LIKE #{filter}
+                OR title LIKE #{filter}
+                OR company LIKE #{filter}
+                OR dept LIKE #{filter}
+                OR mobile LIKE #{filter}
+                OR email LIKE #{filter}
+                )
+            </foreach>
+        </if >
+        <if test="enabled!=null and enabled!=''">
+            AND enabled = #{enabled}
+        </if >
+        <if test="orderBy!=null and orderBy!=''">
+            ORDER BY ${orderBy}
+        </if >
+        <if test="start!=null">
+            OFFSET #{start}
+        </if >
+        <if test="count!=null">
+            LIMIT #{count}
+        </if >
+    </select>
+    <select id="queryUsernames" resultType="java.lang.String">
+        SELECT username  FROM users
+        WHERE 1 = 1
+        <if test="filters!=null">
+            <foreach collection="filters" item="filter" index="index" separator="">
+                AND (
+                username LIKE #{filter}
+                OR name LIKE #{filter}
+                OR title LIKE #{filter}
+                OR company LIKE #{filter}
+                OR dept LIKE #{filter}
+                OR mobile LIKE #{filter}
+                OR email LIKE #{filter}
+                )
+            </foreach>
+        </if >
+        <if test="enabled!=null and enabled!=''">
+            AND enabled = #{enabled}
+        </if >
+        <if test="orderBy!=null and orderBy!=''">
+            ORDER BY ${orderBy}
+        </if >
+        <if test="start!=null">
+            OFFSET #{start}
+        </if >
+        <if test="count!=null">
+            LIMIT #{count}
+        </if >
+    </select>
+    <select id="queryListCount" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM users
+        WHERE 1 = 1
+        <if test="filters!=null">
+            <foreach collection="filters" item="filter" index="index" separator="">
+                AND (
+                username LIKE #{filter}
+                OR name LIKE #{filter}
+                OR title LIKE #{filter}
+                OR company LIKE #{filter}
+                OR dept LIKE #{filter}
+                OR mobile LIKE #{filter}
+                OR email LIKE #{filter}
+                )
+            </foreach>
+        </if >
+        <if test="enabled!=null and enabled!=''">
+            AND enabled = #{enabled}
+        </if >
+    </select>
+
+    <update id="update" parameterType="com.datafor.auth.vo.Users">
+        UPDATE users
+        <set>
+            <if test="username != null">username = #{username},</if>
+            <if test="password != null and password!=''">password = #{password},</if>
+            <if test="name != null">name = #{name},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="company != null">company = #{company},</if>
+            <if test="dept != null">dept = #{dept},</if>
+            <if test="dob != null">dob = #{dob},</if>
+            <if test="mobile != null">mobile = #{mobile},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="enabled != null">enabled = #{enabled},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="update_time != null">update_time = #{update_time},</if>
+        </set>
+        WHERE username = #{username}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM users WHERE username = #{username}
+    </delete>
+
+    <insert id="insert" parameterType="com.datafor.auth.vo.Users">
+		INSERT INTO users(
+			username,
+			password,
+			name,
+			title,
+			company,
+			dept,
+			dob,
+			mobile,
+			email,
+			enabled,
+			description,
+			create_time,
+			update_time
+		) VALUES (
+			#{username},
+			#{password},
+			#{name},
+			#{title},
+			#{company},
+			#{dept},
+			#{dob},
+			#{mobile},
+			#{email},
+			#{enabled},
+			#{description},
+			#{create_time},
+			#{update_time}
+		)
+	</insert>
+
+    <select id="detail" resultType="com.datafor.auth.vo.Users">
+        SELECT username,password,name,title,company,dept,dob,mobile,enabled,description,create_time,email,update_time FROM users
+        WHERE 1 = 1
+        <if test="username!=null and username!=''">
+            AND username = #{username}
+        </if>
+        <if test="email!=null and email!=''">
+            AND email = #{email}
+        </if>
+        limit 1
+    </select>
+
+</mapper>

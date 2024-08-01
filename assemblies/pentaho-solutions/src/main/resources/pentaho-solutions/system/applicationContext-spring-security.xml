@@ -10,7 +10,7 @@
        xmlns:pen="http://www.pentaho.com/schema/pentaho-system"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd
-                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.8.xsd
+                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.4.xsd
                            http://www.pentaho.com/schema/pentaho-system http://www.pentaho.com/schema/pentaho-system.xsd"
        default-lazy-init="true">
 
@@ -90,6 +90,9 @@
                                    httpSessionPentahoSessionContextIntegrationFilter,
                                    httpSessionContextIntegrationFilter,
                                    basicProcessingFilter,
+                                   jwtTokenFilter,
+                                   wecomFilter,
+                                   ldapFilter,
                                    requestParameterProcessingFilter,
                                    anonymousProcessingFilter,
                                    sessionMgmtFilter,
@@ -107,6 +110,8 @@
                                    logoutFilter,
                                    authenticationProcessingFilter,
                                    basicProcessingFilter,
+                                   wecomFilter,
+                                   ldapFilter,
                                    requestParameterProcessingFilter,
                                    anonymousProcessingFilter,
                                    sessionMgmtFilter,
@@ -118,7 +123,9 @@
   </bean>
 
   <!-- ======================== AUTHENTICATION ======================= -->
-
+  <bean id="jwtTokenFilter" class="com.datafor.pc.dashboard.web.filter.LoginWithTokenFilter"/>
+  <bean id="wecomFilter" class="com.datafor.pc.dashboard.web.filter.LoginWithWecomFilter"/>
+  <bean id="ldapFilter" class="com.datafor.pc.dashboard.web.filter.LoginWithLdapFilter"/>
   <bean id="defaultAuthenticationEventPublisher" class="org.springframework.security.authentication.DefaultAuthenticationEventPublisher"/>
 
   <bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
@@ -307,15 +314,11 @@
     <property name="securityMetadataSource">
       <!-- http://stackoverflow.com/questions/30099851/spring-security-samples-preauth-xml-example-fails-to-run#answer-30105317 -->
       <sec:filter-security-metadata-source request-matcher="ciRegex" use-expressions="false">
+      	<sec:intercept-url pattern="\A/content/datafor/.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/osgi/cxf/hadoop-cluster/runTests.*\Z" access="Authenticated" />
         <sec:intercept-url pattern="\A/osgi/cxf/hadoop-cluster/.*\Z" access="Administrator" />
         <sec:intercept-url pattern="\A/content/common-ui/resources/web/(.+/)*.+\.js.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/js/require(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/common-ui/resources/web/require(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/common-ui/resources/web/dojo/require(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/config/deploy/client-config-enabler-require-js-cfg.js\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/config/admin-plugin/client-config-enabler-require-js-cfg.js\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/admin-plugin/resources/admin-plugin-require-js-cfg.js\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/[^\?]*(require)(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/content/data-access/resources/gwt/.*css\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/webcontext.js.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/content/common-ui/resources/web/cache/cache-service.js.*\Z" access="Anonymous,Authenticated" />
@@ -386,6 +389,12 @@
     <property name="securityMetadataSource">
       <!-- http://stackoverflow.com/questions/30099851/spring-security-samples-preauth-xml-example-fails-to-run#answer-30105317 -->
       <sec:filter-security-metadata-source request-matcher="ciRegex" use-expressions="false">
+      	<!--<sec:intercept-url pattern="\A/plugin/datafor/api/open/.*\Z" access="Authenticated" />
+      	<sec:intercept-url pattern="\A/plugin/datafor/api/edit/.*\Z" access="Authenticated" />
+      	<sec:intercept-url pattern="\A/plugin/datafor/api/integrate/.*\Z" access="Authenticated" />-->
+      	<sec:intercept-url pattern="\A/plugin/datafor/api/.*\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/plugin/datafor-modeler/api/.*\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/plugin/datafor-auth/api/.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/webservices/unifiedrepository\?wsdl.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/webservices/userrolelistservice\?wsdl.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/webservices/userroleservice\?wsdl.*\Z" access="Anonymous,Authenticated" />
@@ -399,6 +408,7 @@
         <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z" access="Anonymous,Authenticated" method="HEAD" />
         <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated" method="OPTIONS" />
         <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated" method="HEAD" />
+        <sec:intercept-url pattern="\A/api/[^\?]*(require)(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/api/.*\Z" access="Authenticated" />
         <sec:intercept-url pattern="\A/plugin/.*\Z" access="Authenticated" />
       </sec:filter-security-metadata-source>

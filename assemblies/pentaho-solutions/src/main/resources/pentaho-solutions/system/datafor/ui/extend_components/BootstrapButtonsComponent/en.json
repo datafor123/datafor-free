@@ -1,0 +1,10 @@
+{
+  "component name": "Buttons",
+  "component tooltip": "Buttons filter",
+  "component description": "Buttons filter",
+  "button group style": "Color and Border",
+  "button grid": "Separators",
+  "button grid desc": "Button separators",
+  "button align": "Align",
+  "button align desc": "Align the buttons"
+}

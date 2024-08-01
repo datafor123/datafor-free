@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Visualizer</title>
+  	<link rel="shortcut icon" href="__WEBAPP_NAME__/content/datafor/ui/images/logo_notext.png"/>
+   	<!-- CSS-Compressed-Begin -->
+	  <link type="text/css" href="__WEBAPP_NAME__/content/datafor/ui/data/patch/common/umi.css?_t=__LOAD_VARIABLE__" rel="stylesheet">
+    <!-- CSS-Compressed-End -->
+    <style type="text/css">
+      *{
+        margin: 0px;
+        padding:0px;
+      }
+      html{
+        overflow: hidden;
+      }
+      html,body,
+      .pba-v-license,
+      .pba-gis-config,
+      .fluid-container{
+        width: 100%;
+        height: 100%;
+      }
+      .fluid-container{
+        padding: 20px;
+      }
+      .fluid-container>h2{
+        left: 25px!important;
+      }
+      .fluid-container .ant-layout{
+        background: transparent;
+      }
+      .ant-tabs-tabpane div.content{
+        display: flex;
+        flex-direction: column;
+      }
+      .ant-tabs-tabpane div.content,
+      .ant-tabs-tabpane div.content section.ant-layout,
+      .ant-tabs-tabpane div.content section.ant-layout .ant-layout-content,
+      .ant-tabs-tabpane div.content section.ant-layout .ant-layout-content>div{
+        height: 100%; /*否则滚动条会消失*/
+        position: relative;
+      }
+    </style>
+</head>
+<body>
+<i id="react-empty-container" style="display:none;"></i>
+<div class="fluid-container"></div>
+<div class="notification-area">
+<script type="text/javascript" src="__WEBAPP_NAME__/content/datafor/ui/data/patch/common/umi.js?_t=__LOAD_VARIABLE__"></script>
+<script type="text/javascript">
+   var application = '__WEBAPP_NAME__';
+   var locale = "__LOCALE__";
+   var userName = "__USER__";
+   var zh = {
+      cancelText: '取消',
+      close: '关闭',
+      uploadLicenseTitle: '点击、或者拖入上传的Licence文件',
+      contentLoading: '加载中...',
+      copy: '复制',
+      uploadLicense: '上传许可证',
+      uploadEmpty: '上传内容为空',
+      uploadError: '上传出错',
+      licensePageName: '许可证',
+      licenseUploadTooltip: '上传许可证',
+      licenseValidState: '许可证有效状态',
+      licenseValid: '有效',
+      licenseTrial: '试用',
+      licenseInvalid: '无效',
+      licenseExpire: '过期时间',
+      downloadLicense: '去下载许可证',
+      licenseNotfound: '没有检测到许可证',
+      settings: 'Visualizer设置',
+      machine_code_get_faild: '机器码获取失败',
+      get_machine_code: '获取机器码信息',
+      contact_admin_for_error_message: '异常信息捕捉失败，请联系管理员',
+   };
+   var en = {
+      cancelText: 'Cancel',
+      close: 'Close',
+      copy: 'Copy',
+      uploadLicenseTitle: 'Click to upload or drag to upload',
+      contentLoading: 'Content loading...',
+      uploadLicense: 'Upload your license',
+      uploadEmpty: 'Upload content empty',
+      uploadError: 'Error',
+      licensePageName: 'License',
+      licenseUploadTooltip: 'Upload license',
+      licenseValidState: 'License status',
+      licenseValid: 'Valid',
+      licenseTrial: 'Trial',
+      licenseInvalid: 'Invalid',
+      licenseExpire: 'Expire',
+      licenseNotfound: 'No license founded',
+      downloadLicense: 'Download license',
+      settings: 'Visualizer setting',
+      machine_code_get_faild: 'Faild to get machine code',
+      get_machine_code: 'Get the machine code',
+      contact_admin_for_error_message: 'No exception error message, please contact the administrator',
+   };
+   var zh_gis = {
+      access_denied_save: '当前用户没有权限进行保存操作',
+      loading: '加载中...',
+      success: '保存成功',
+      configName: '地图API密钥',
+      defaultMap: 'GIS默认地图',
+      osm: 'OpenStreetMap',
+      google: '谷歌地图',
+      gaode: '高德地图',
+      tileAddress: '瓦片地址',
+      geocodeAddress: '地理编码地址',
+      clearGeocodingCache: '清空地理编码缓存',
+      interval: '编码时间间隔',
+      apiKey: 'Web服务Key',
+      save: '保存',
+      cancel: '取消',
+      mapbox: "Mapbox地图",
+      webServiceKey: "Web端Key",
+      secureKey: "Web端Key安全密钥",
+      cleanMapCacheConfirm: "提示",
+      cleanMapCacheConfirmDesc: "清空操作将导致查看gis地图时重新请求地理编码，确认清空吗？",
+      cleanMapCacheConfirmCancel: "取消",
+      cleanMapCacheConfirmOK: "确定"
+   };
+   var en_gis = {
+      access_denied_save: 'Administrator required to save',
+      loading: 'Loading...',
+      success: 'Success',
+      configName: 'Map API key',
+      defaultMap: 'Default map',
+      osm: 'OpenStreetMap',
+      google: 'Google',
+      clearGeocodingCache: 'Clear the geocoding cache',
+      gaode: 'Amap',
+      tileAddress: 'Tile address',
+      geocodeAddress: 'GeoCoding address',
+      interval: 'Geocoding interval',
+      apiKey: 'Web service key',
+      save: 'Save',
+      cancel: 'Cancel',
+      mapbox: "Mapbox",
+      webServiceKey: "JS API",
+      secureKey: "JS API Secure",
+      cleanMapCacheConfirm: "Prompt",
+      cleanMapCacheConfirmDesc: "The clearing operation will cause the geocoding to be re-requested when viewing the gis map. Are you sure to clear?",
+      cleanMapCacheConfirmCancel: "Cancel",
+      cleanMapCacheConfirmOK: "Ok"
+   };
+   var msg = en;
+   if(['zh_CN', 'zh', 'zh-CN'].indexOf(locale)>=0){
+      msg = zh;
+   }
+   (function(){
+    var container = document.querySelector('.fluid-container');
+    var ref = window._VISUALIZER_REF;
+    var activeKey = 'License';
+    var gis_locale = ['zh_CN', 'zh', 'zh-CN'].indexOf(locale)>=0 ? zh_gis : en_gis;
+    var tabArray = [{
+        title: msg.licensePageName,
+        key: 'License',
+        component: function() {
+          return ref.React.createElement(
+            'div',
+            {className: 'pba-v-license'},
+          );
+        },
+        auth:function() {
+          return true;
+        },
+      },{
+        title: gis_locale.configName,
+        key: 'GISConfig',
+        component: function() {
+          return ref.React.createElement(
+            'div',
+            {className: 'pba-gis-config'},
+          );
+        },
+        auth:function() {
+          return true;
+        },
+      }
+    ];
+    var props = {
+        titleName: msg.settings,
+        activeKey: null,
+        onTabClick: function(key){
+          activeKey = key;
+          toUpdateTab(activeKey);
+        },
+        SymbolIcon: {
+          type: function(){
+            return '';
+          },
+          props: {}
+        },
+        tabs: tabArray
+    };
+    var LoadUI = ref.loadingNotify();
+    var toUpdateTab = function(key){
+      var elem;
+      props.activeKey = key;
+      ref.dataforTab(container, props);
+      setTimeout(function(){
+        if(key == 'License'){
+          elem = document.querySelector('.pba-v-license');
+          ref.licenseUI(elem, {
+            locale: ['zh', 'zh-CN', 'zh_CN'].indexOf(locale)>=0?'zh-CN': 'en-US',
+            appName: String(application).replace(/^\/|\/$/g, ''),
+            localeMsg: msg
+          });
+        }else if(key == 'GISConfig'){
+          elem = document.querySelector('.pba-gis-config');
+          ref.GISConfigUI(elem, {
+            locale: ['zh', 'zh-CN', 'zh_CN'].indexOf(locale)>=0?'zh-CN': 'en-US',
+            localeMsg: gis_locale,
+            appName: String(application).replace(/^\/|\/$/g, ''),
+            shouldSaved: function(goNext){
+                LoadUI.show(gis_locale.loading);
+                ref.queryPentahoUserRoles({
+                  appName: String(application).replace(/^\/|\/$/g, ''),
+                }).then(d=>{
+                  var roles = d ? d.roles || [] : [];
+                  LoadUI.hide();
+                  if(roles.indexOf("Administrator")<0){
+                    ref.requestNotificationUI('error', {
+                      message: gis_locale.access_denied_save
+                    });
+                    goNext(false);
+                  }else{
+                    goNext(true);
+                  }
+                })
+            }
+          });
+        }
+      }, 20);
+    };
+    toUpdateTab(activeKey);
+  })();
+</script>
+</body>
+</html>

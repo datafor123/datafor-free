@@ -1,0 +1,31 @@
+{
+	"name": "Parent-Child table",
+	"name tip": "Hierarchical (parent-child) structured table",
+	"parent field": "Parent",
+	"parent field desc": "Parent field",
+	"child field": "Child",
+	"child field desc": "Child field",
+	"filed caption": "Caption",
+	"filed caption desc": "Caption for the each node",
+	"others fields": "Others",
+	"others fields desc": "Other fields outside of the parent-child structure can be indicator or dimension fields.",
+	"row height": "Row",
+	"row height desc": "The height of row",
+	"row hover bg": "Hover row",
+	"row hover bg desc": "The background color of hover row",
+	"expand levels": "Expand levels",
+	"expand levels desc": "Specify from which level the default expansion starts, if not specified, all will be expanded without collapsing.",
+	"cell bg event": {
+		"row data": "The record data of the row where the cell is located.",
+		"column id": "The column ID where the cell is located.",
+		"row index": "The row index where the cell is located.",
+		"default color": "The default color code of the background for the cell.",
+		"return desc": "The returned value will be used as the background color code for the cell.",
+		"event desc": "A custom event for cell background color, which will be executed every time the table renders and updates the content of each cell."
+	},
+	"content align": "Align",
+	"content align desc": "Align for content",
+	"no parent-child data": "No valid parent-child relationship data",
+	"indent size": "Indent",
+	"indent size desc": "Text indent, unit px"
+}

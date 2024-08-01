@@ -1,0 +1,8 @@
+{
+  "component name": "100% Stacked bar",
+  "component desc": "100% Stacked bar chart",
+  "label content type": "Content",
+  "label content type desc": "The content type of the label",
+  "show original value": "Value",
+  "show percent value": "Percent"
+}

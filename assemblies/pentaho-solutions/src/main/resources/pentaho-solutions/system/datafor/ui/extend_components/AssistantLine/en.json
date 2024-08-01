@@ -1,0 +1,21 @@
+{
+"line options": "Border",
+"line size": "Line",
+"line size desc": "Line width",
+"line color": "Color",
+"line color desc": "Line color",
+"line type": "Type",
+"line type desc": "Line type",
+"line type solid": "Solid",
+"line type dashed": "Dashed",
+"line type dotted": "Dotted",
+"rotate options": "Rotation",
+"rotate angle": "Angle",
+"rotate angle desc": "Rotation angle",
+"custom event": "Events",
+"custom click": "Click event",
+"custom click desc": "Line click event",
+"name": "Line",
+"name desc": "Line component",
+"name tip": "Line component"
+}

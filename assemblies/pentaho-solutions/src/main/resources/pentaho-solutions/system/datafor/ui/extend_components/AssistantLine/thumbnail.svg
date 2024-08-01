@@ -1,0 +1,8 @@
+{
+  "name": "椭圆",
+  "name desc": "椭圆组件",
+  "name tip": "椭圆组件",
+  "custom event": "自定义事件",
+  "custom click": "单击事件",
+  "custom click desc": "线条点击事件"
+}

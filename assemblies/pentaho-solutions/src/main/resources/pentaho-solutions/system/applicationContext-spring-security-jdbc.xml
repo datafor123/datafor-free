@@ -32,12 +32,12 @@
 		</property>
 		<property name="authoritiesByUsernameQuery">
 			<value>
-				<![CDATA[SELECT username, authority FROM GRANTED_AUTHORITIES WHERE username = ? ORDER BY authority]]>
+				<![CDATA[SELECT * from (SELECT username, authority FROM GRANTED_AUTHORITIES union select concat('_sys_role_',authority) as username,authority FROM authorities ) t WHERE username = ? ORDER BY authority]]>
 			</value>
 		</property>
 		<property name="usersByUsernameQuery">
 			<value>
-				<![CDATA[SELECT username, password, enabled FROM USERS WHERE username = ? ORDER BY username]]>
+				<![CDATA[SELECT * from (SELECT username, password, enabled FROM USERS union select concat('_sys_role_',authority) as username,'' as password,'1' as enabled FROM authorities ) t WHERE username =  ?]]>
 			</value>
 		</property>
     <property name="rolePrefix" value="" />
@@ -69,7 +69,7 @@
 	</bean>
 	
   <bean id="jdbcPasswordEncoder"
-    class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
+    class="org.springframework.security.crypto.password.Md5PasswordEncoder" />
  
 
 </beans>
