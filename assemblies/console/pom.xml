@@ -20,7 +20,6 @@
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <packagingExcludes>**/empty.tmp</packagingExcludes>
-          <webXml>${package.resources.directory}/WEB-INF/web.xml</webXml>
           <webappDirectory>${prepared.war.directory}</webappDirectory>
           <outputDirectory>${project.build.directory}</outputDirectory>
         </configuration>

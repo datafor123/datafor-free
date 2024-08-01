@@ -5,8 +5,8 @@
      <display-name>Pentaho BI Platform</display-name>
       <module>
          <web>
-            <web-uri>pentaho.war</web-uri>
-            <context-root>/pentaho</context-root>
+            <web-uri>datafor.war</web-uri>
+            <context-root>/datafor</context-root>
          </web>
       </module>
       <module>
@@ -15,6 +15,12 @@
             <context-root>/pentaho-style</context-root>
          </web>
       </module>
+    <module>
+        <web>
+            <web-uri>console.war</web-uri>
+            <context-root>/console</context-root>
+        </web>
+    </module>
       
 <!-- additional web apps -->
 				

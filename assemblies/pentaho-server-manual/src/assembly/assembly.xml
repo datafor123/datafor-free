@@ -65,6 +65,15 @@
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
       <includes>
+        <include>pentaho:console:war</include>
+      </includes>
+      <outputFileNameMapping>console.${artifact.extension}</outputFileNameMapping>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>.</outputDirectory>
+      <useTransitiveDependencies>false</useTransitiveDependencies>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
         <include>pentaho:pentaho-war:war</include>
       </includes>
       <outputFileNameMapping>pentaho.${artifact.extension}</outputFileNameMapping>
