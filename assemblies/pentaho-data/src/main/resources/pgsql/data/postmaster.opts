@@ -1,0 +1,1 @@
+/mnt/e/E/datafor/product/free/datafor-server/pgsql/bin/postgres "-D" "pgsql/data"
