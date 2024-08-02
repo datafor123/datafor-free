@@ -13,7 +13,7 @@
   * system/hibernate/sqlserver.hibernate.cfg.xml
   *
   -->
-    <config-file>system/hibernate/hsql.hibernate.cfg.xml</config-file>
+    <config-file>system/hibernate/postgresql.hibernate.cfg.xml</config-file>
 
   <!--
   *

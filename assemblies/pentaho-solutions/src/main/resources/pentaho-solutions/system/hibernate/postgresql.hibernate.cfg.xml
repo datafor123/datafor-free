@@ -11,7 +11,7 @@
     <property name="hibernate.cache.use_query_cache">true</property>
     <!--  Postgres 8 Configuration -->
     <property name="connection.driver_class">org.postgresql.Driver</property>
-    <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+    <property name="connection.url">jdbc:postgresql://localhost:25432/hibernate</property>
     <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="hibernate.connection.datasource">java:comp/env/jdbc/Hibernate</property>
     <property name="connection.pool_size">10</property>
