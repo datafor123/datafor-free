@@ -53,6 +53,6 @@ org.springframework.security.core.context.SecurityContextHolder" %>
     <i id="react-empty-container"></i>
 
     <div id="root"></div>
-    <script src="../../console/umi.f4269c00.js"></script>
+    <script src="../../console/umi.866d3564.js"></script>
   </body>
 </html>
