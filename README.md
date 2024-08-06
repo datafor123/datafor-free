@@ -44,7 +44,7 @@ Datafor is developed based on [Pentaho BA Server Core](https://github.com/pentah
 
 ## Get Datafor
 
-You can download Datafor for the following platforms:
+You can download Datafor(free edition) for the following platforms:
 
 - [Linux](https://github.com/datafor123/datafor-free/releases/download/6.06/datafor-server-free-linux-6.06.zip)
 - [Windows](https://github.com/datafor123/datafor-free/releases/download/6.06/datafor-server-free-windows-6.06.zip)
