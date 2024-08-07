@@ -44,7 +44,7 @@ Datafor is developed based on [Pentaho BA Server Core](https://github.com/pentah
 
 ## Get Datafor
 
-You can download Datafor for the following platforms:
+You can download Datafor(free edition) for the following platforms:
 
 - [Linux](https://github.com/datafor123/datafor-free/releases/download/6.06/datafor-server-free-linux-6.06.zip)
 - [Windows](https://github.com/datafor123/datafor-free/releases/download/6.06/datafor-server-free-windows-6.06.zip)
@@ -54,11 +54,11 @@ You can download Datafor for the following platforms:
 - [CentOS](https://help.datafor.com.cn/docs/en/20%20setup/datafor-centos)
 - [Ubuntu](https://help.datafor.com.cn/docs/en/20%20setup/datafor-ubuntu)
 - [Windows](https://help.datafor.com.cn/docs/en/20%20setup/datafor-windows)
-- Docker
+- [Docker](https://help.datafor.com.cn/docs/en/20%20setup/datafor-docker)
 
 ## Get Help
 
-- For bug reports and feature requests, visit our [GitHub Issues](https://github.com/datafor123/Datafor-Free-Edition/issues) page.
+- For bug reports and feature requests, visit our [GitHub Issues](https://github.com/datafor123/datafor-free//issues) page.
 - For general questions, email us at [support@datafor.com.cn](mailto:support@datafor.com.cn).
 - Refer to the [help](https://help.datafor.com.cn/docs/en/) documentation for additional assistance.
 
@@ -282,6 +282,27 @@ The Enterprise Edition offers significant advantages over the Free Edition, incl
   </tr>
   <tr>
     <td>Query and Model Caching</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Support</td>
+    <td>Help document</td>
+    <td align="center">&#x2705;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Training</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Technical Support</td>
+    <td align="center">&#x274C;</td>
+    <td align="center">&#x2705;</td>
+  </tr>
+  <tr>
+    <td>Customization</td>
     <td align="center">&#x274C;</td>
     <td align="center">&#x2705;</td>
   </tr>
