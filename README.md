@@ -105,7 +105,7 @@ The Enterprise Edition offers significant advantages over the Free Edition, incl
     <td align="center">&#x2705;</td>
   </tr>
   <tr>
-    <td>Calculated Measures</td>
+    <td><a href="https://help.datafor.com.cn/docs/en/70%20analysis/analysis-calculated-measures" target="_blank">Calculated Measures</a></td>
     <td align="center">&#x274C;</td>
     <td align="center">&#x2705;</td>
   </tr>
@@ -157,7 +157,7 @@ The Enterprise Edition offers significant advantages over the Free Edition, incl
     <td align="center">&#x2705;</td>
   </tr>
   <tr>
-    <td>Drill Down</td>
+    <td><a href="https://help.datafor.com.cn/docs/en/70%20analysis/kzt-jmgnjs" target="_blank">Drill Down</a></td>
     <td align="center">&#x2705;</td>
     <td align="center">&#x2705;</td>
   </tr>
