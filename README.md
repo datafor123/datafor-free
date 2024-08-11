@@ -152,7 +152,7 @@ The Enterprise Edition offers significant advantages over the Free Edition, incl
   </tr>
   <tr>
     <td rowspan="6">Analysis</td>
-    <td>Cross-Model analytics</td>
+    <td><a href="https://help.datafor.com.cn/docs/en/70%20analysis/analysis-cross-filtering" target="_blank">Cross-Model analytics</a></td>
     <td align="center">&#x2705;</td>
     <td align="center">&#x2705;</td>
   </tr>
@@ -167,17 +167,17 @@ The Enterprise Edition offers significant advantages over the Free Edition, incl
     <td align="center">&#x2705;</td>
   </tr>
   <tr>
-    <td>Drill Through</td>
+    <td><a href="https://help.datafor.com.cn/docs/en/70%20analysis/analysis-Drill-through" target="_blank">Drill Through</a></td>
     <td align="center">&#x274C;</td>
     <td align="center">&#x2705;</td>
   </tr>
   <tr>
-    <td>Parameters</td>
+    <td><a href="https://help.datafor.com.cn/docs/en/70%20analysis/analysis-parameters" target="_blank">Parameters</a></td>
     <td align="center">&#x274C;</td>
     <td align="center">&#x2705;</td>
   </tr>
   <tr>
-    <td>Calculated Measures</td>
+    <td><a href="https://help.datafor.com.cn/docs/en/70%20analysis/analysis-calculated-measures" target="_blank">Calculated Measures</a></td>
     <td align="center">&#x274C;</td>
     <td align="center">&#x2705;</td>
   </tr>
